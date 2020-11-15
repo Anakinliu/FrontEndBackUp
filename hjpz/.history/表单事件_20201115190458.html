@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+    <style>
+        form {
+            width: 100px;
+            min-width: 400px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>表单事件</legend>
+            <label for="">
+                邮箱：<input type="email" name="" id="text1"/>
+            </label>
+            <label for="">
+                输入的次数统计: <input type="text" name="" id="txt2"/>
+            </label>
+            
+            <input type="submit" value="">
+        </fieldset>
+    </form>
+
+    <script>
+        var txt1 = document.getElementById('txt1');
+        var txt2 = document.getElementById('txt2');
+
+        var num = 0;
+
+        txt1.oninput = function () { // 用户输入时触发
+            num ++;
+            txt2.value = num;
+
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.getElementById('private-msg').innerHTML

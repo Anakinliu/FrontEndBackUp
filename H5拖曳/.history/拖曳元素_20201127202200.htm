@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖曳元素</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" draggable="true"></div>
+    <script>
+        var box=document.querySelector('.box');
+
+        // 绑定拖曳事件
+
+        // 拖曳开始
+        box.ondragstart = function() {
+            console.log('开始');
+        }
+
+        // 鼠标拖曳时离开被拖的元素时触发
+        box.ondragleave = function() {
+            console.log('离开');
+
+        }
+
+        // 结束
+        bpx.ondrag
+    </script>
+</body>
+</html>

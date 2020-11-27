@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测全屏</title>
+    <style>
+        div.box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+
+    <script>
+        var box = document.querySelector(".box1");
+
+        box.onclick = function () {
+            console.log('请求 ');
+            box.requestFullscreen();
+        }
+    </script>
+</body>
+</html>

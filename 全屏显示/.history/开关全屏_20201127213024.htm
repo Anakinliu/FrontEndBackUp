@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开关全屏</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            background-color: green;
+        }
+
+                /*全屏伪类：当元素处于全屏时，改变元素的背景色*/
+        .box:-webkit-full-screen {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+
+    <script>
+        var box = document.querySelector("#box1");
+        
+        box.onclick = function() {
+            console.log('请求全屏');
+
+            if (box.requestFullscreen) {
+                console.log('requestFullscreen');
+                box.requestFullscreen();
+            } else if (box.webkitRequestFullScreen) {
+                console.log('webkitRequestFullScreen');
+                box.webkitRequestFullScreen();
+            } else if (box.mozRequestFullScreen) {
+                console.log('webkitRequestFullScreen');
+                box.mozRequestFullScreen();
+            }
+       
+        }
+    </script>
+</body>
+</html>

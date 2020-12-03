@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+var el = document.body;  
+if (el.addEventListener) {  
+   window.addEventListener("online", function () {  
+     alert("online");}, true);  
+   window.addEventListener("offline", function () {  
+     alert("offline");}, true);  
+}  
+else if (el.attachEvent) {  
+   window.attachEvent("ononline", function () {  
+     alert("online");});  
+   window.attachEvent("onoffline", function () {  
+     alert("offline");});  
+}  
+else {  
+   window.ononline = function () {  
+     alert("online");};  
+   window.onoffline = function () {  
+     alert("offline");};  
+}  
+// 注意，检测ononline事件,要绑定在window对象上 
+//attachEvent——兼容：IE7、IE8；不兼容firefox、chrome、IE9、IE10、IE11、safari、opera
+//addEventListener——兼容：firefox、chrome、IE、safari、opera；不兼容IE7、IE8
+</script>
+</html>

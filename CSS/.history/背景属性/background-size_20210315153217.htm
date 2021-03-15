@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img_wrap {
+            display: flex;
+        }
+        .img {
+            width: 200px;
+            height: 200px;
+            border-style:solid;
+            border-width:1px;
+            border-color:red;
+            background: url(1.jpg) no-repeat;
+            margin-right: 20px;
+        }
+        .div1 {
+            background-size: cover ;
+        }
+        .div2 {
+            background-size: contain;
+        }
+        .div3 {
+            background-size: 100% ;
+        }
+        .div4 {
+            background-size: 50%;
+            background-position: bottom center;
+        }
+    </style>
+</head>
+<body>
+    <div class="img_wrap">
+        <div class="img div1">cover</div>
+        <div class="img div2">contain</div>
+        <div class="img div3">100%</div>
+        <div class="img div4">50% position: bottom center</div>
+    </div>
+    
+</body>
+</html>

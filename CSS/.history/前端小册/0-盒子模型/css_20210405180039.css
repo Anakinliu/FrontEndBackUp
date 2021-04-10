@@ -1,0 +1,15 @@
+.normal {
+    width: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid red;
+    background-color: rgb(255, 96, 4);
+}
+.non-normal {
+    width: 200px;
+    box-sizing: border-box; 
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid red;
+    background-color: rgb(177, 113, 30);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background图片</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background-color: black;
+        }
+        .box {
+            width: 700px;
+            height: 600px;
+            border: 5px hotpink dashed;
+            background-color: yellow;
+            background-image: url('500.jpg');
+            background-position:center;
+            background-repeat: no-repeat;
+            font-style: italic;
+            
+        }
+        .tu {
+            width: 500px;
+            height: 500px;
+            border: 2px hotpink dashed;
+            background-image: url(https://picsum.photos/100);
+            background-repeat: space;
+
+        }
+        .tu2 {
+            width: 500px;
+            height: 500px;
+            border: 2px hotpink dashed;
+            background-image: url(https://picsum.photos/100);
+            background-repeat:repeat-y;
+            background-position-x: center;
+        }
+        .f {
+            
+            width: 800px;
+            height: 800px;
+            border: 2px palegoldenrod dashed;
+        }
+        .lu {
+            width: 100px;
+            height: 100px;
+            background-image: url(https://picsum.photos/100);
+            background-position-x: left;
+            background-position-y: top;
+        }
+        .um {
+            width: 100px;
+            height: 100px;
+            background-image: url(https://picsum.photos/100);
+            inherits: ;
+            background-position-x: center;
+            background-position-y: top;
+        }
+        .line1 {
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <p class="box">背景图的作用是给某个元素添加背景, 不会添加额外的元素。可以设置背景颜色或者背景图。</p>
+    <p class="tu">图</p>
+    <p class="tu2">图</p> -->
+    <div class="f">
+        <div class="line1">
+            <p class="lu"></p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.normal {
+    width: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid red;
+    background-color: antiquewhite;
+}
+.non-normal {
+    width: 200px;
+    box-sizing: border-box; 
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid red;
+}

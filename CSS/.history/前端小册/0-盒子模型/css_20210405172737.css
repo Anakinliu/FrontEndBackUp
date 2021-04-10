@@ -1,0 +1,11 @@
+.normal {
+    margin: 20px;
+    padding: 15px;
+    border: 5px;
+}
+.non-normal {
+    box-sizing: border-box; 
+    margin: 20px;
+    padding: 15px;
+    border: 5px;
+}

@@ -1,0 +1,51 @@
+
+/* day6.css */
+/*清除标签默认边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* class 选择器，经常用到，以 . 开头*/
+.title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.line {
+    height: 1px;
+    background-color: gray;
+    margin-bottom: 2px;
+}
+/* 伪选择器 */
+div > span {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    line-height: 40px;
+}
+div :first-child {
+    margin-left: 15px;
+}
+div :last-child {
+    margin-right: 15px;
+}
+/* id选择器，以 # 号开头，一个 HTML 中只能有一个*/
+#nav-box {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #0077FF;
+}
+#button {
+    height: 40px;
+    line-height: 40px;
+    background-color: #0077FF;
+    border-radius: 4px;
+    color: white;
+    margin: 100px auto;
+    width: 200px;
+    text-align: center;
+}
+#d {
+    color: red;
+}

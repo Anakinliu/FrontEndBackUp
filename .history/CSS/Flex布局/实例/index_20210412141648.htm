@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骰子-两点</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+        }
+        .box {
+            background-color: #e7e7e7;
+            border-radius: 15px;
+            width: 80px;
+            height: 80px;
+            border: 5px #fff solid;
+            margin: 10px;
+
+            display: flex;
+
+
+        }
+
+        .box1 {
+            justify-content: center;/*MAIN Axis*/
+            align-items: center;/*CROSS Axis*/
+        }
+        .box2 {
+
+            display: flex;
+            justify-content: space-between;/*MAIN Axis*/
+        }
+        .box3 {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;/*MAIN Axis*/
+            align-items: center;
+        }
+
+
+        .item {
+            background-color: #2b2b2b;
+            border-radius: 11px;
+            width: 22px;
+            height: 22px;
+            margin: 3px;
+        }
+
+        .box4 {
+            display: flex;
+        }
+
+        .item4:nth-child(2) {
+            align-self: center;
+        }
+
+        .box5 {
+            /*   */
+            justify-content: space-between;
+        }
+
+        .item5:nth-child(2) {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+    <!-- div是Flex容器，代表骰子的一个面 -->
+    <!-- span代表这一面的点子，是Flex项目，有几个点就有几个span -->
+<body>
+    <div class="box">
+        <span class="item">box</span>
+    </div>
+
+    <div class="box box1">
+        <span class="item">box 1</span>
+        <span class="item"></span>
+    </div>
+
+    <div class="box box2">
+        <span class="item">box box2</span>
+        <span class="item"></span>
+    </div>
+
+    <div class="box box3">
+        <span class="item">box box3</span>
+        <span class="item"></span>
+    </div>
+
+    <div class="box box4">
+        <span class="item item4"></span>
+        <span class="item item4">box box4</span>
+    </div>
+
+    <div class="box box5">
+        <span class="item item5">box box5</span>
+        <span class="item item5"></span>
+    </div>
+</body>
+</html>

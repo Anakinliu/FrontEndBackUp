@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骰子-三点</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        .box1 {
+            
+        }
+        .box2 {
+            /* MAIN方向 内 item之间的排列方式 */
+            justify-content: center;/*MAIN Axis*/
+            /* CROSS方向 不同 item 的排列方式 */
+            align-items: center;/*CROSS Axis*/
+        }
+
+        .box3 {
+            flex-direction: column;
+        }
+        .item3:nth-child(2) {
+            align-self: center;
+        }
+        .item3:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        .box4 {
+            flex-direction: column-reverse;
+        }
+
+    </style>
+</head>
+    <!-- div是Flex容器，代表骰子的一个面 -->
+    <!-- span代表这一面的点子，是Flex项目，有几个点就有几个span -->
+<body>
+    <div class="box box1">
+        <span class="item">box 1</span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+
+    <div class="box box2">
+        <span class="item">box 2</span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+
+    <div class="box box3">
+        <span class="item item3">box 3</span>
+        <span class="item item3"></span>
+        <span class="item item3"></span>
+    </div>
+
+    <div class="box box4">
+        <span class="item item3">box 4</span>
+        <span class="item item3"></span>
+        <span class="item item3"></span>
+    </div>
+
+    div.box.
+
+
+</body>
+</html>

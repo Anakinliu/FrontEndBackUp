@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        a {
+            font-size: 18px;
+            color: yellowgreen;
+        }
+        a:hover {
+            color: blue;
+        }
+        a:visited {
+            color: gray;
+        }
+        p::first-letter {
+            font-size:xx-large;
+        }
+
+        .icic::before{
+            /* content: 'before'; */
+            /* content: ''; */
+            
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url(https://picsum.photos/50);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            margin-right: 4px;
+
+            width: 30px;
+            height: 30px;
+        }
+        .real {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.io/">前端小课</a>
+    <p>VERY GOOD</p>
+    <p class="icic">哪个是伪元素？ <img class="real" src="https://picsum.photos/50" alt=""> </p>
+
+    
+</body>
+</html>

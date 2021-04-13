@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入框布局</title>
+    <style>
+        .main{
+            max
+            margin: 100px auto;
+            font-size: 14px;
+        }
+        /* 每行是一个flex容器 */
+        .flex-1{
+            display: flex;
+            max-width: 350px;
+            /* item在交叉轴方向居中 */
+            align-items: center;
+            height: 32px;
+            margin-top: 10px;
+
+            background: #eee;
+            border: 1px #ccc solid;
+        }
+        .flex-1 .shurukuang{
+            /* 1：flex-grow，扩大以占满空间 */
+            /* 0：flex-shrink，不缩小，即使空间不足 */
+            flex: 1 0 auto;
+            border: 0px;
+            /* CROSS方向 stretch（拉伸） */
+            align-self: stretch;
+            padding: 0 4px;
+        }
+        .flex-1 .name{
+            padding: 0 8px;
+        }
+        .flex-1 .btn{
+            border: 0px;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="flex-1">
+            <label class="name">搜索</label>
+            <input class="shurukuang" type="text">
+            <button class="btn">GO</button>
+        </div>
+
+        <div class="flex-1">
+            <label class="name">联系电话</label>
+            <input class="shurukuang" type="text">
+        </div>
+    </div>
+</body>
+</html>

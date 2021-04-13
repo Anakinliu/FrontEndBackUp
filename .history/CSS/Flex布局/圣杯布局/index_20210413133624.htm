@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局</title>
+    <style>
+        .hg {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+
+            border: 3px black solid;
+ 
+        }
+
+        header, 
+        footer {
+            flex: 0 0 auto;
+            justify-content: center;
+            align-items: center;
+
+            border: 3px red solid;
+            margin: 10px;
+        }
+
+        .hg-body {
+            flex: 1 1 auto;
+
+            border: 3px yellow solid;
+            margin: 10px;
+        }
+
+        .hg-content {
+            flex: 1 1 auto;
+
+            border: 3px green solid;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .hg-nav, .hg-ads {
+            /* display: flex; */
+            /* 两个边栏的宽度设为12em */
+            flex: 0 1 12em;
+
+            border: 3px blueviolet solid;
+            margin: 10px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hg-nav {
+            /* order属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0。 */
+            order: -1;
+
+            border: 3px blue solid;
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hg {
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .hg-nav,
+            .hg-ads,
+            .hg-content {
+                flex: auto;
+            }
+        }
+    </style>
+</head>
+<body class="hg">
+
+    <header>
+        <p>header</p>
+    </header>
+
+    <div class="hg-body">
+        <main class="hg-content">
+            <p>content</p>
+        </main>
+        <nav class="hg-nav">
+            <p>nav</p>
+        </nav>
+        <aside class="hg-ads">
+            <p>ads</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+</html>

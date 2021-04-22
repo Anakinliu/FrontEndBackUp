@@ -1,0 +1,49 @@
+@import "./base.less";
+
+.header {
+    padding: 0 @edge-width;
+    background-color: @background-color;
+    .title {
+        color: @text-color;
+        font-size: @normal-font-size;
+        &::first-letter {
+            font-size: 48px;
+            color: @strong-color;
+        }
+    }
+    p a {
+        color: @main-color;
+        font-size: @normal-font-size;
+        /* &:hover 相当于a:hover */
+        &:hover {
+            color: @strong-color;
+        }
+    }
+
+    p:nth-child(3) {
+        width: 100px;
+        text-align: center;
+        padding: @small-edge-width;
+        // 引用base.less定义的选择器
+        .wx-border();
+    }
+    
+}
+
+.footer {
+    padding: 0 @edge-width;
+    background-color: @background-color;
+    margin-top: @small-edge-width;
+    #alert {
+        // 编译后结果会被计算出来
+        width: @edge-width + 80px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+

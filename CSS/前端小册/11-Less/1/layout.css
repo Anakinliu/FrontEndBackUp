@@ -1,0 +1,40 @@
+.wx-border {
+  border: solid 1px #aaa;
+}
+.header {
+  padding: 0 16px;
+  background-color: #ddd;
+}
+.header .title {
+  color: #bbb;
+  font-size: 18px;
+}
+.header .title::first-letter {
+  font-size: 48px;
+  color: red;
+}
+.header p a {
+  color: #aaa;
+  font-size: 18px;
+  /* &:hover 相当于a:hover */
+}
+.header p a:hover {
+  color: red;
+}
+.header p:nth-child(3) {
+  width: 100px;
+  text-align: center;
+  padding: 8px;
+  border: solid 1px #aaa;
+}
+.footer {
+  padding: 0 16px;
+  background-color: #ddd;
+  margin-top: 8px;
+}
+.footer #alert {
+  width: 96px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+}

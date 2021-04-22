@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <title>Basic document flow</title>
+
+    <style>
+        body {
+            width: 700px;
+            /* 居中显示 上下0，左右 */
+            margin: 0 auto;
+        }
+
+        p {
+            background: aqua;
+            border: 3px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        span {
+            background: red;
+            border: 1px solid black;
+        }
+
+        .positioned {
+            background: yellow;
+        }
+</style>
+</head>
+
+<body>
+    <h1>我是Web流式布局</h1>
+    <p>我是一个 p 标签</p>
+    <p class="positioned">我也是一个 p 标签</p>
+    <p>我还是一个 p 标签</p>
+    <p>我是 p <span>我是 span 标签</span> and <span>我是 span 标签</span> 哈哈</p>
+
+</body>

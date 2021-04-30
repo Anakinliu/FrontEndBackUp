@@ -14,7 +14,7 @@
     }
 
     body {
-        height: 2000px;
+        height: 1000px;
     }
 
     .box {
@@ -36,13 +36,13 @@
 
     p:nth-child(2) {
         background-color: green;
+        position: absolute;
+        top: 0;
+        left: 0;
+
     }
-    p:nth-child(2):hover {
-        position: relative;
-        top: 3px;
-        left: 10px;
-    }
-    /* p:nth-child(4) {
+
+    p:nth-child(4) {
         background-color: green;
         position: absolute;
         top: 0;
@@ -64,22 +64,10 @@
         bottom: 0;
         left: 0;
 
-    } */
+    }
 
     p:nth-child(3) {
         background-color: black;
-        position: absolute;
-        top: 70px;
-        left: 200px;
-        bottom: 70px;
-        right: 200px;
-        /* 会拉长这个 p */
-    }
-
-    .ding {
-        position: fixed;
-        top: 5px;
-        right: 5px;
     }
 </style>
 <body>
@@ -88,14 +76,10 @@
     <div class="box">
         <p>前端小课，每日一课</p>
         <p>左上</p>
-        <p>从0-1学前端</p>
+        <p>前端从0-1</p>
         <!-- <p>右上</p>
         <p>左下</p>
         <p>右上</p> -->
-    </div>
-
-    <div class="ding">
-        <p>我是不会动的</p>
     </div>
 </body>
 </body>

@@ -1,0 +1,28 @@
+<!-- 使用 meter 元素 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-12</title>
+</head>
+<body>
+    <!-- 不同阶段的颜色不一样 -->
+    <meter id="myprogress" value="0" max="100" low="30" high="90" optimum="70"></meter>
+
+    <script>
+        
+        let progress = document.getElementById('myprogress');
+        
+        let v = 10;
+        for (var i = 1; i<= 10; ) {
+            setTimeout(function aaa() {
+                progress.value = v;
+                v += 10;
+        }, 1000*i);
+            i += 1;
+        }
+    </script>
+</body>
+</html>

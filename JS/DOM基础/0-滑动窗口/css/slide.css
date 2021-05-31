@@ -1,0 +1,15 @@
+.container {
+    height: 300px;
+    margin: 0 auto;
+    border-right: 2px solid red;
+    border-bottom: 2px solid blue;
+    overflow: hidden;
+    /* 不然overflow会失效 */
+    position: relative;
+}
+
+.container img {
+    position: absolute;
+    display: block;
+    border-left: 2px solid rgb(0, 255, 0);
+}

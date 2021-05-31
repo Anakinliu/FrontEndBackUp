@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noscript标签</title>
+</head>
+<body>
+    <noscript>
+        <h3>未启用JS！</h3>
+    </noscript>
+    <button id="show" class="btn">显示内容</button>
+    <div id="content" class="content" hidden>
+        <p>段落</p>
+        <ul>
+            <li>行1</li>
+            <li>行2</li>
+            <li>行3</li>
+            <li>行4</li>
+            <li>行5</li>
+        </ul>
+    </div>
+    <script>
+        const b = document.querySelector("#show");
+        b.addEventListener('click', (e) => {
+            const content = document.querySelector("#content");
+            content.removeAttribute('hidden');
+        });
+    </script>
+</body>
+</html>

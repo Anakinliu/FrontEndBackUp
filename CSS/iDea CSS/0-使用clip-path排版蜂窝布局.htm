@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .cellular-layout {
+        --sr-annote-color-0: #b4d9fb;
+        --sr-annote-color-1: #ffeb3b;
+        --sr-annote-color-2: #80deea;
+        --sr-annote-color-3: #85d1f6;
+        --sr-annote-color-4: #8cd842;
+        --sr-annote-color-5: #ffb7da;
+        font: 14px/1 PingFang SC,Microsoft YaHei,sans-serif;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: -50px;
+        width: 400px;
+        text-align: center;
+        --count: 16;
+    }
+.a {
+    --sr-annote-color-0: #b4d9fb;
+    --sr-annote-color-1: #ffeb3b;
+    --sr-annote-color-2: #80deea;
+    --sr-annote-color-3: #85d1f6;
+    --sr-annote-color-4: #8cd842;
+    --sr-annote-color-5: #ffb7da;
+    font: 14px/1 PingFang SC,Microsoft YaHei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    --count: 16;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --Θ: calc(var(--index)/var(--count)*1turn);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(51, 204, 153);
+    filter: hue-rotate(var(--Θ));
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0px 50%);
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    margin-left: 0;
+    --index: 0;
+}
+.b {
+    --sr-annote-color-0: #b4d9fb;
+    --sr-annote-color-1: #ffeb3b;
+    --sr-annote-color-2: #80deea;
+    --sr-annote-color-3: #85d1f6;
+    --sr-annote-color-4: #8cd842;
+    --sr-annote-color-5: #ffb7da;
+    font: 14px/1 PingFang SC,Microsoft YaHei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    --count: 16;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --Θ: calc(var(--index)/var(--count)*1turn);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(51, 204, 153);
+    filter: hue-rotate(var(--Θ));
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0px 50%);
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    margin-left: 0;
+    --index: 4;
+}
+.c {
+    --sr-annote-color-0: #b4d9fb;
+    --sr-annote-color-1: #ffeb3b;
+    --sr-annote-color-2: #80deea;
+    --sr-annote-color-3: #85d1f6;
+    --sr-annote-color-4: #8cd842;
+    --sr-annote-color-5: #ffb7da;
+    font: 14px/1 PingFang SC,Microsoft YaHei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    --count: 16;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --Θ: calc(var(--index)/var(--count)*1turn);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(51, 204, 153);
+    filter: hue-rotate(var(--Θ));
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0px 50%);
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    margin-left: 0;
+    --index: 8;
+}
+.d {
+    --sr-annote-color-0: #b4d9fb;
+    --sr-annote-color-1: #ffeb3b;
+    --sr-annote-color-2: #80deea;
+    --sr-annote-color-3: #85d1f6;
+    --sr-annote-color-4: #8cd842;
+    --sr-annote-color-5: #ffb7da;
+    font: 14px/1 PingFang SC,Microsoft YaHei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    --count: 16;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --Θ: calc(var(--index)/var(--count)*1turn);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(51, 204, 153);
+    filter: hue-rotate(var(--Θ));
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0px 50%);
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    margin-left: 0;
+    --index: 12;
+}
+    </style>
+</head>
+<body>
+    <div data-v-fbe3591c="" class="cellular-layout" style="--count:16;">
+        <label data-v-fbe3591c="" for="a" style="--index:0;">我</label>
+         <label data-v-fbe3591c="" class="a" style="--index:1;">见</label>
+          <label data-v-fbe3591c="" class="a" style="--index:2;">犹</label>
+           <label data-v-fbe3591c="" class="a" style="--index:3;">怜</label>
+            <label data-v-fbe3591c="" for="b" style="--index:4;">爱</label>
+             <label data-v-fbe3591c="" class="b" style="--index:5;">不</label>
+              <label data-v-fbe3591c="" class="b" style="--index:6;">释</label>
+               <label data-v-fbe3591c="" class="b" style="--index:7;">手</label>
+                <label data-v-fbe3591c="" for="c" style="--index:8;">雅</label>
+                 <label data-v-fbe3591c="" class="c" style="--index:9;">俗</label>
+                  <label data-v-fbe3591c="" class="c" style="--index:10;">共</label>
+                   <label data-v-fbe3591c="" class="c" style="--index:11;">赏</label>
+                    <label data-v-fbe3591c="" for="d" style="--index:12;">君</label>
+                     <label data-v-fbe3591c="" class="d" style="--index:13;">子</label>
+                      <label data-v-fbe3591c="" class="d" style="--index:14;">好</label>
+                       <label data-v-fbe3591c="" class="d" style="--index:15;">逑</label>
+    </div>
+</body>
+</html>

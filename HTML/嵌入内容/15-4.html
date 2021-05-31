@@ -1,0 +1,21 @@
+<!-- 创建分区响应图 (通过元素 map 与 area)，不同区域跳转不同网页，无需服务端-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-4</title>
+</head>
+<body>
+    <p>
+        <img src="bind.png" width="200" height="100" alt="bind" usemap="#mymap">
+
+    </p>
+    <map name="mymap">
+        <area shape="rect" coords="0,0,200,60" href="https://www.baidu.com" alt="">
+        <area shape="rect" coords="0,60,200,100" href="https://www.bing.com" alt="">
+    </map>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 50px;
+        }
+        button {
+            padding: 6px 16px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 125%;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <button>YES</button>
+    <!-- 
+
+        如果我们决定改变字号1①（可能是为了生成一个更大、更重要的按钮），
+        就得同时调整行高，因为这两个属性都写成了绝对值.
+
+        更麻烦的是，行高并没有反映出它跟字号的关系，因此我们还得做些算术，算出字号改变之后的行高该是多少.
+        在这个例子中，行高是字号的1.5 倍。因此， line-height: 1.5; 会更易维护
+
+        比如说，如果我们决定把父级(body)的字号加大，就不得不修改每一处使用绝对值作为字体尺寸的样式。如果改用百分比或em 单位就好多了
+        继续修改，把这些长度值都改成em 单位，那这些效果的值就都变成可缩放的了，而且是依赖字号进行缩放
+     -->
+</body>
+</html>

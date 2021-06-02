@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.js"></script></head>
+<body>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat recusandae quam dignissimos dolores officiis vero aperiam commodi quia deleniti laudantium non asperiores illo, doloribus error sed debitis numquam vitae ad.</p>
+        <p id="middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor </p>
+        <p>Lorem ipsum dolor Lorem ipsum dolor</p>
+    </div>
+<hr>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat recusandae quam dignissimos dolores officiis vero aperiam commodi quia deleniti laudantium non asperiores illo, doloribus error sed debitis numquam vitae ad.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor </p>
+        <p>Lorem ipsum dolor Lorem ipsum dolor</p>
+    </div>
+    <script>
+        $(document).ready(() => {
+            // 只包含子,不包含孙子,曾孙子...
+            $("#box > p").css("border", "3px solid red");
+
+            // 只选择一个兄弟
+            $("#middle + p").css("border", "3px dashed blue");
+
+        });
+    </script>
+</body>
+</html>

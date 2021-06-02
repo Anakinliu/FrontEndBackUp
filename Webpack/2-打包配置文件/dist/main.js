@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{const e=JSON.parse('{"name":"csgo","age":20}');console.log(e);let o=document.querySelector("#game");console.log(o),o.style.color="red";for(let t in e){let l=document.createElement("p");l.appendChild(document.createTextNode(`${t} - ${e[t]}`)),o.appendChild(l)}})()})();

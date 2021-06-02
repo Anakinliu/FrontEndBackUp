@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX</title>
+    <style>
+        #father {
+            height: 50px;
+            width: 100%;
+            position: relative;
+            border: black 2px dashed;
+            padding: 5px;
+        }
+        #son {
+            height: 30px;
+            width: 100%;
+            border: red 2px dashed;
+
+            position: absolute;
+            top: 20px;
+
+        }
+        #p {
+            height: 30px;
+            width: 100%;
+            border: green 2px dashed;
+        }
+
+        /*  */
+        #f2 {
+            height: 50px;
+            width: 100%;
+            position: static;
+            border: black 2px dashed;
+            padding: 5px;
+        }
+        #s2 {
+            height: 30px;
+            width: 100%;
+            border: red 2px dashed;
+
+            position: absolute;
+            top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit beatae exercitationem porro ad autem repudiandae ratione eveniet, quaerat iste fuga, voluptatum nobis libero id a recusandae dolor reiciendis iusto assumenda!
+        Perspiciatis modi reiciendis fuga adipisci, neque provident ab, libero blanditiis minima deserunt, laudantium expedita! Officiis, quia doloremque impedit omnis velit sequi optio accusantium similique tempora cum ut odit voluptatibus laboriosam.
+        Eum dolore modi amet expedita aliquid laborum at temporibus. Tenetur sit, nemo maiores culpa ratione amet. Odit ipsam quisquam repellat repudiandae? Exercitationem perferendis consectetur minus laudantium pariatur, laborum iure enim.
+        Maiores culpa atque voluptatem aut autem ducimus fugit doloremque qui corrupti commodi officiis ut impedit provident, ab sint quia quae quasi illum laudantium praesentium aspernatur. Sapiente culpa dolor illum nulla.
+        Modi fugit laudantium labore odio ipsum quis doloribus sed incidunt laborum, placeat in autem necessitatibus quidem nihil. Sed, ipsa laudantium repudiandae ducimus at quisquam veniam neque! Perferendis dicta nam ut?
+        Excepturi architecto dolorem nihil molestias quasi aut veniam quam sequi deleniti dignissimos eligendi, a eius quo, fuga ducimus, impedit voluptate aperiam amet cupiditate optio doloribus reiciendis? Exercitationem mollitia tempora labore.
+        Vel sit ratione sint qui placeat, accusantium delectus nisi voluptates iste ipsam nostrum inventore numquam tempora optio est, natus quibusdam ad, nobis in mollitia nihil expedita quas. Suscipit, dolorem neque?
+        Accusamus ipsa sunt velit omnis blanditiis similique assumenda. Quis ab explicabo eligendi laudantium modi dolorem necessitatibus blanditiis, placeat dolores voluptates quae quasi nesciunt quam, animi molestiae adipisci ratione eos corporis.
+        Ab iure voluptatibus expedita eos possimus, dolores libero asperiores magnam rem cumque magni doloremque facere quo. Nostrum fugit ea sequi recusandae dolor est iusto vel, dignissimos, ratione similique accusantium quaerat.
+        Quae nulla repellendus nostrum aliquam quisquam quo officia exercitationem eveniet. Numquam eius voluptatem, aperiam rerum laudantium adipisci cumque iste pariatur! Eaque quasi iure et, alias expedita laborum doloremque repudiandae quibusdam?
+        Cum repellendus earum atque quia nostrum vel voluptatum doloribus quibusdam, harum maiores. Velit, expedita repellendus molestiae, sit assumenda dolorem commodi temporibus debitis nisi dolore dolores. Cupiditate esse maiores cum consequuntur?
+        Dicta architecto vel quaerat nihil sint iure nesciunt harum eius quo totam incidunt cupiditate, tempora, repellat facilis sit dolore officiis fugit pariatur modi. A necessitatibus animi voluptatum cumque non assumenda!
+        Tempora dolor tenetur in illo illum optio commodi aspernatur iusto reprehenderit similique? Accusantium quas iure illo, quisquam laborum, nulla similique vel doloribus magni natus totam sed, voluptates adipisci eum sequi.
+        Necessitatibus ullam facilis, et minima nostrum quasi quod odit eligendi. Illum quos, ullam omnis fugit harum recusandae repudiandae possimus dolorem. Quia saepe laborum adipisci excepturi ipsa quisquam, eaque soluta officiis.
+        Molestias, deleniti corporis beatae nobis quam placeat voluptate, magni harum ipsa dolorum vero, ipsam quasi deserunt sint esse veniam suscipit temporibus id delectus explicabo non debitis? Nobis voluptates quas expedita?
+        Reiciendis sunt deserunt placeat, veritatis enim quae dignissimos facere voluptate, aliquid nostrum facilis soluta inventore reprehenderit officiis quos voluptas alias quam exercitationem cumque expedita, maiores aspernatur! Fugit asperiores quaerat officiis!
+        Aliquam deserunt animi iure saepe praesentium quas quis quasi corporis sit, minus non mollitia ex incidunt enim provident, numquam perferendis! Nulla, porro suscipit tempore blanditiis dolorem eligendi nam nisi ipsa!
+        Alias molestias saepe, aut magnam illo expedita, provident in beatae ullam repellendus nulla amet excepturi doloremque maxime veniam voluptas a? Fugiat accusamus ullam, error nisi tempora sapiente dolore at corporis?
+        Et pariatur vel impedit quis quasi reiciendis error aspernatur consequatur. Sequi, eos hic nam maiores magnam neque, odit rem commodi id reiciendis fugiat qui nostrum? Minima sunt perferendis beatae totam?
+        Non sunt nulla officia. Illum voluptates debitis impedit reiciendis repellat qui velit minima ut. Aliquam consectetur quo consequuntur iure, blanditiis at. Tempore similique fuga repellendus, commodi amet voluptates maxime mollitia.</p>
+    </div>
+    <!-- son的坑位上是p -->
+    <div id="father">
+        <div id="son"></div>
+        <div id="p"></div>
+      </div>
+
+      <!-- 父元素不设置relative,子元素的 absolute 是相对文本根元素的 -->
+      <div id="f2">
+        <div id="s2"></div>
+      </div>
+</body>
+</html>

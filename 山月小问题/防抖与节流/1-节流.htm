@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+</head>
+
+<body>
+    <input id="throttle" type="button" value="节流">
+
+    <script>
+        let btn = document.querySelector("#throttle");
+        function debounce(wait) {
+            let timer;
+            return (event) => {
+                if (timer) return;
+                timer = setTimeout(() => {
+                    console.log(event.target.value);
+                    timer = null;
+                }, wait);
+            }
+        }
+        btn.addEventListener("click", debounce(500));
+    </script>
+</body>
+
+</html>

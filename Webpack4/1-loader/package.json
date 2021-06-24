@@ -1,14 +1,16 @@
 {
-  "name": "webpack_code",
+  "name": "webpack_config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   }

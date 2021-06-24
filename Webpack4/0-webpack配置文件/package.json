@@ -1,18 +1,15 @@
 {
-  "name": "webpack_css",
+  "name": "webpack_loader_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^5.2.6",
-    "less": "^4.1.1",
-    "less-loader": "^9.0.0",
-    "style-loader": "^2.0.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   }

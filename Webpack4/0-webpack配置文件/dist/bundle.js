@@ -1,0 +1,1 @@
+(()=>{var r={239:()=>{alert("header.js load")}},e={};function t(a){var o=e[a];if(void 0!==o)return o.exports;var s=e[a]={exports:{}};return r[a](s,s.exports,t),s.exports}t(239),alert("index.js load")})();

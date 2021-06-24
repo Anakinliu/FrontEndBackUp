@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p1"></p>
+    <p id="p1"></p>
+
+    <script>
+        document.writeln("<pre>URL: " + document.URL);
+        var elems = document.getElementsByTagName("p");
+        for (let i=0; i< elems.length; i++) {
+            document.writeln("element id: " + elems[i].id);
+            elems[i].style.border = "medium double black";
+            elems[i].style.padding = "4px";
+        }
+        document.write("</pre>");
+    </script>
+</body>
+</html>

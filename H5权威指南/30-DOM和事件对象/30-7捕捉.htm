@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捕捉事件</title>
+</head>
+    <style>
+        #container {
+            height: 100px;
+        }
+    </style>
+<body>
+    <div id="container">
+        <p id="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span id="in-block">Nesciunt mollitia, illum
+            dicta, repellat inventore nobis perferendis nisi assumenda vero ipsam expedita quam hic!</span> Molestiae
+        culpa voluptatem molestias consequatur cum reiciendis!</p>
+    </div>
+    <script>
+        let c = document.querySelector("#container");
+        let p = document.querySelector("#block");
+        let s = document.querySelector("#in-block");
+        p.addEventListener("mouseover", handleDMouse, true);
+        p.addEventListener("mouseout", handleDMouse, true);
+        p.addEventListener("mouseover", handleDMouse);
+        p.addEventListener("mouseout", handleDMouse);
+
+        // c.addEventListener("mouseout", handleCMouse);
+        // c.addEventListener("mouseover", handleCMouse, true);
+
+        s.addEventListener("mouseover", handleMouse);
+        s.addEventListener("mouseout", handleMouse);
+
+        function handleCMouse(e) {
+            console.log('Start-container');
+            console.log("调用了 ", "e.type : ", e.type, "e.eventPhase ", e.eventPhase);
+            console.log('Event.CAPTURING_PHASE number is ', Event.CAPTURING_PHASE); 
+            console.log('Event.BUBBLING_PHASE number is ', Event.BUBBLING_PHASE);
+            console.log('Event.AT_TARGET number is ', Event.AT_TARGET);
+            console.log('End-container');
+
+        }
+
+        function handleDMouse(e) {
+            // 此函数接收的事件处于什么阶段,当第三个参数是false时,
+            // 当把鼠标移动到p内但非span上,则此函数接收的事件e处于AT_TARGET
+            // 当把鼠标移动到span上,则此函数接收的事件e处于BUBBLING_PHASE冒泡阶段
+
+            // 此函数接收的事件处于什么阶段,当第三个参数是true时,
+            // 当把鼠标移动到p内但非span上,则此函数接收的事件e处于AT_TARGET
+            // 当把鼠标移动到span上,则此函数接收的事件e处于CAPTURING_PHASE捕获阶段
+            console.log('Start-block');
+            console.log("调用了 ", "e.type : ", e.type, "e.eventPhase ", e.eventPhase);
+            console.log('Event.CAPTURING_PHASE number is ', Event.CAPTURING_PHASE); 
+            console.log('Event.BUBBLING_PHASE number is ', Event.BUBBLING_PHASE);
+            console.log('Event.AT_TARGET number is ', Event.AT_TARGET);
+            console.log('End-block');
+
+            if (e.type === "mouseover" ) {
+                // target是真正事件发生的元素
+                e.target.style.border = "5px solid black";
+                // currentTarget:触发器绑定的元素就是currentTarget
+                e.currentTarget.style.border =  "5px solid red";
+                console.log(e.target === e.currentTarget);
+            }
+            else if (e.type === "mouseout" ) {
+                e.target.style.removeProperty("border");
+                // currentTarget的触发器
+                e.currentTarget.style.removeProperty("border");
+            }
+
+            // if (e.type === "mouseover" && e.eventPhase === Event.BUBBLING_PHASE) {
+            //     e.target.style.border = "5px solid black";
+            //     e.currentTarget.style.border =  "5px solid red";
+            // }
+            // else if (e.type === "mouseout" && e.eventPhase === Event.BUBBLING_PHASE) {
+            //     e.target.style.removeProperty("border");
+            //     e.currentTarget.style.removeProperty("border");
+            // }
+
+            // if (e.type === "mouseover" && e.eventPhase === Event.AT_TARGET) {
+            //     e.target.style.border = "5px solid black";
+            //     e.currentTarget.style.border = "5px solid red";
+            // }
+            // else if (e.type === "mouseout" && e.eventPhase === Event.AT_TARGET) {
+            //     e.target.style.removeProperty("border");
+            //     e.currentTarget.style.removeProperty("border");
+            // }
+
+            
+        }
+
+        function handleMouse(e) {
+            if (e.type === "mouseover") {
+                e.target.style.background = "green";
+                e.target.style.color = "yellow";
+            } else {
+                e.target.style.removeProperty("background");
+                e.target.style.removeProperty("color");
+
+            }
+        }
+    </script>
+</body>
+
+</html>

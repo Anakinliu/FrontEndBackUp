@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>Apple</button>
+        <button>Cherry</button>
+        <button>Banana</button>
+    </div>
+
+    <div id="target">
+        Press button
+    </div>
+    <script>
+        let buttons = document.getElementsByTagName("button");
+        for (let i = 0; i < buttons.length; i++) {
+            const element = buttons[i];
+            element.onclick = handleButton;
+        }
+
+        function handleButton(e) {
+            let httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = handleResponse;
+            httpRequest.open("GET", e.target.innerHTML + ".html");
+            httpRequest.send();
+        }
+
+        function handleResponse(e) {
+            // e.target就是XMLHttpRequest对象
+            console.log(e.target);
+            console.log("-s-",e.target.readyState,e.target.status);
+            if (e.target.readyState == XMLHttpRequest.DONE && e.target.status == 200) {
+                document.getElementById("target").innerHTML = e.target.responseText;
+            }
+        }
+    </script>
+</body>
+</html>

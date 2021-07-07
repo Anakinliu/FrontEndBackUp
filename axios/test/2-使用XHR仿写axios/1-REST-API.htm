@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest-api</title>
+</head>
+<style>
+    div {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    button {
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div>
+        <button id="C">post-增</button>
+        <button id="R">get-查</button>
+        <button id="U">put-更</button>
+        <button id="D">delete-删</button>
+    </div>
+
+
+    <script src="2-仿写axios.js"></script>
+    <script>
+
+        let create = document.querySelector("#C");
+        let read = document.querySelector("#R");
+        let update = document.querySelector("#U");
+        let del = document.querySelector("#D");
+
+        // 为什么这么写url可以去看json-server的文档
+        // const restUrl = 'http://127.0.0.1:8888/posts/2'
+
+        create.addEventListener('click', () => {
+            console.log('post(create): ');
+            axios({
+                "url": 'http://127.0.0.1:8888/posts',
+                "method": 'POST',
+                "data": {
+                    "id": 4,
+                    "title": "666",
+                    "author": "DEF"
+                }
+            })
+        })
+
+        read.addEventListener('click', () => {
+            console.log('get(read): ');
+            axios({
+                "url": 'http://127.0.0.1:8888/posts',
+                "method": 'GET',
+                "params": {
+                    id: 1,
+                    title: "def"
+                }
+            }).then((response, error) => {
+                if (response)
+                    console.log(response);
+                if (error)
+                    console.log(error);
+            })
+
+        });
+
+        update.addEventListener('click', () => {
+            console.log('put(update): ');
+            axios({
+                "url": 'http://127.0.0.1:8888/posts/4',
+                "method": 'PUT',
+                "data": {
+                    "id": 4,
+                    "title": "233",
+                    "author": "LMN"
+                }
+            })
+        })
+
+        del.addEventListener('click', () => {
+            console.log('delete: ');
+            axios({
+                "url": 'http://127.0.0.1:8888/posts/1',
+                "method": 'DELETE',
+                "params": {
+                    id: 1,
+                    title: "def"
+                }
+            }).then((response, error) => {
+                if (response)
+                    console.log(response);
+                if (error)
+                    console.log(error);
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

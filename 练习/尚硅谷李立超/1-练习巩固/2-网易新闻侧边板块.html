@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-网易新闻侧边板块</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .news-box {
+            width: 300px;
+            height: 324px;
+            /* 最上面 的横条 */
+
+            margin: 100px auto;
+        }
+
+        .news-box .news-title {
+            border-top: #dddddd 1px solid;
+
+            line-height: 40px;
+        }
+
+        .news-title h2 {
+            display: inline-block;
+
+            /* 盒子模型的垂直布局,上移盒子,就可以让边框盖住上面的边框了 */
+            margin-top: -1px;
+
+            border-top: red 1px solid;
+
+            font-weight: bold;
+
+
+        }
+
+        .news-img {
+            height: 150px;
+        }
+
+        .news-img h2 {
+            font-weight: bold;
+            color: seashell;
+            /* 如果不给news-img设置高度,那么就是跟随内容的高度,那么就是news-img最下面元素的盒子就是高度的边缘 */
+            margin-top: -30px;
+
+            padding-left: 50px;
+        }
+
+        .news-text ul li {
+            color: #666666;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        .news-text ul li::before {
+            content: "✦";
+            padding: 3px;
+            color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news-box">
+        <div class="news-title">
+            <h2><a href="#">财经</a></h2>
+        </div>
+        <div class="news-img">
+            <a href="#">
+                <img class="box-image" src="img/2/1.jpg" alt="">
+                <h2>理想汽车座椅上物质含水银</h2>
+            </a>
+        </div>
+        <div class="news-text">
+            <ul>
+                <li>12天360元 暑期学校托管“真香”了</li>
+                <li>中办国办：坚决查处金融风险背后腐败问题</li>
+                <li>维他奶背后的香港豪门</li>
+                <li>美债又怎么了？10年期美债收益率跌穿1.35%</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

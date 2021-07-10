@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-开始</title>
+    <style>
+        body {
+            font-size: 64px;
+        }
+
+        /* 
+        用来制作水平布局.
+            float浮动可选值:
+                none,默认值
+                left,元素向左浮动
+                right,元素向右浮动
+
+            NOTE: 
+            1. 元素设置left或者right后,盒子水平布局的等式不再成立,
+            并且"完全脱离文档流",不再占用位置,所以会被后面的文档流元素占据位置,
+            浮动只是在父元素内左右浮动
+            2. 默认left与right不会移动出父元素之外
+            3. 各个浮动元素之间margin也会互相挤
+            4. 浮动只能左右浮动,如果上边有非浮动元素,会阻挡其浮上去
+            5. 浮动元素水平高度不会超过它左边的相邻的兄弟元素,最多和它一样高
+
+            总结:
+                1. 浮动元素的垂直对齐受到非浮动元素影响,非浮动元素就像一堵墙
+                2. 浮动元素的水平对齐受到其相邻兄弟元素影响.
+         */
+        .float-box1 {
+            width: 500px;
+            height: 500px;
+            background-color: cadetblue;
+            float: left;
+            margin: 20px;
+        }
+
+        .float-box2 {
+            width: 500px;
+            height: 500px;
+            background-color: cadetblue;
+            float: right;
+            margin: 20px;
+        }
+
+        .normal {
+            width: 900px;
+            height: 300px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float-box1">box1</div>
+    <div class="normal"></div>
+    <div class="float-box1">box1</div>
+    <div class="float-box2">box2</div>
+</body>
+
+</html>

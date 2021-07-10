@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-高度塌陷与BFC</title>
+    <!-- 实际中很少把父元素写死,会写成造成:子元素内容多,无法显示,子元素内容少,太多留白 
+    但是使用浮动布局时,若不设置父元素的高度,会造成父元素高度塌陷,使得后面的其他的布局混乱了.
+    举例高度塌陷:
+    所以,需要清除高度塌陷问题!
+   
+    -->
+    <!-- 
+         BFC可以解决(Block formatting context)
+            是元素的隐含属性,可以手动开启后,BFC元素为**独立与页面的布局**.
+            开启BFC的方法:
+            不推荐方法(副作用大):
+                1. 添加float属性即可
+                2. 将元素设为行内元素
+            常用方法:
+                1. 将元素的overflow设置为一个非visible
+                    - 一般设为hidden开启BFC
+
+        开启BFC后的特点:
+            1. 不会被浮动的元素所覆盖
+            2. 子元素和父元素的外边距不会发生冲突(设置了子元素的外边距而父元素也被动设置了)
+            3. 开启BFC的元素可以包含浮动的子元素
+     -->
+     <style>
+         .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            float: left;
+         }
+         .box2 {
+            width: 110px;
+            height: 110px;
+            background-color: greenyellow;
+            /* float: left; */
+
+            /* 效果相同的overflow */
+            /* overflow: auto; */
+
+            /* 效果相同的inline-block */
+            /* display: inline-block; */
+         }
+     </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

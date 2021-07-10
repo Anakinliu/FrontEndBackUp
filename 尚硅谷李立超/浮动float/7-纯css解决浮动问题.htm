@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-纯css解决浮动问题</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            padding-top: 10px;
+        }
+
+        header,
+        main,
+        footer {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            height: 100px;
+            background-color: rgb(241, 208, 73);
+            margin-bottom: 5px;
+        }
+
+        main {
+            box-sizing: border-box;
+            padding: 10px;
+            /* height: 800px; */
+            background-color: darkgray;
+            /* 形成BFC */
+            /* overflow: hidden; */
+        }
+
+        nav {
+            width: 200px;
+            height: 700px;
+            margin-right: 5px;
+            float: left;
+            background-color: darkorange;
+        }
+
+        content {
+            width: 770px;
+            height: 700px;
+
+            float: left;
+
+            background-color: darksalmon;
+        }
+
+        more {
+            width: 200px;
+            height: 700px;
+            margin-left: 5px;
+            float: left;
+            background-color: darkorange;
+        }
+
+        main::after {
+            content: '在最外层容器里添加(删去)';
+            display: block;
+            clear: both;
+        }
+
+        footer {
+            margin: 5px auto 0 auto;
+            height: 50px;
+            background-color: rgb(243, 200, 30);
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header><p>头</p></header>
+
+    <main>
+        <nav></nav>
+        <content></content>
+        <more></more>
+        <!-- 添加一个div,把main容器撑起来 -->
+        <!-- 使用after伪类即可 -->
+        <!-- <div style="clear: both;"></div> -->
+    </main>
+
+    <footer><p>脚,由于float会环绕文字,所以这个p段落没有跟着footer上去</p></footer>
+</body>
+
+</html>

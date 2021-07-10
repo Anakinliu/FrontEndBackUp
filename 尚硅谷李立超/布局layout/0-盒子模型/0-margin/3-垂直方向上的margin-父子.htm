@@ -8,10 +8,19 @@
     <title>3-垂直方向上的margin</title>
     <style>
         .father {
-            border-top: 10px solid black;
+            /* border-top: 10px solid black; */
             height: 200px;
             width: 200px;
             background-color: goldenrod;
+            /* 不用设置边框进行曲线救国了,开启BFC即可 */
+            /* overflow: hidden; */
+
+        }
+
+        /* 最终方案 */
+        .father::before {
+            content: '';
+            display: inline-block;
         }
 
         .son {

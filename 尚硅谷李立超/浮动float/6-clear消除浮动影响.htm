@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-clear消除浮动影响</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: palegreen;
+            float: right;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(196, 163, 230);
+            clear: right;
+        }
+        /* .art {
+            clear: both;
+        } */
+        /* 
+            clear:
+            作用:清除浮动元素对当前元素的影响.
+            作用原理:浏览器为本元素设置上外边距.
+            可选:
+                left 清除本元素的左侧的浮动元素对本元素产生的影响
+                right 清除本元素的右侧的浮动元素对本元素产生的影响
+                both 取上述两者中上外边距较大的值
+        */
+    </style>
+</head>
+
+<body>
+    <div class="box1">1-float:left</div>
+    <div class="box2">2-float:right</div>
+    <div class="box3">3-clear:left</div>
+
+    <!-- <p class="art">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum placeat ipsa saepe blanditiis earum facere rerum quidem provident impedit, velit atque modi temporibus deleniti quibusdam non fugit porro ex voluptatum?
+        Similique, vel error modi quia iste vero autem doloremque eius repudiandae, aliquid totam explicabo temporibus magni soluta quisquam ex ea sapiente reiciendis sed non omnis aperiam ratione dicta adipisci! Deserunt?
+        Nemo facere, deleniti consequuntur esse amet hic et fuga labore molestias, quis excepturi, aliquid quisquam sed magnam quidem! Expedita hic, dolore quidem esse alias nihil minus ratione voluptatem nostrum ipsum.
+        Repellat, nesciunt. Labore eum nisi soluta ex eos earum, ut nam, hic cupiditate modi animi omnis, repellendus voluptatum repudiandae et eveniet dolorem commodi. Neque deleniti, ab vel repellat asperiores quaerat?
+        Dolore temporibus explicabo vitae ipsam doloremque a tempore sunt consectetur eos, quae, corporis eius, vel enim officia. Ad, sunt animi molestias mollitia ipsum recusandae ducimus fugiat corrupti illo natus. Quis?
+        Doloremque qui quod porro est laborum facere praesentium cumque fugit, doloribus vel ducimus voluptatibus, nemo eveniet unde a laudantium! Error esse quaerat architecto natus, doloribus debitis quas est sit alias.
+        Omnis sunt delectus rem in nisi fugiat distinctio eligendi molestiae ut sit, magnam necessitatibus? Dolor earum facilis amet, commodi accusantium obcaecati, iste totam dolorem adipisci eaque sunt non quaerat quibusdam?
+        Dignissimos, dolorum saepe illum nesciunt nulla, exercitationem in reprehenderit quae inventore vero veniam, accusantium numquam cum dicta error. Esse soluta accusamus eum quidem veniam expedita voluptate possimus explicabo ullam hic?
+        Repellendus, fugiat! Et incidunt voluptas omnis repellendus culpa sed maiores cumque numquam dolore dolores nisi amet iusto veritatis ipsa at, officia, sequi magnam ea! Iste excepturi vel quam suscipit necessitatibus.
+        Vero quae consectetur delectus, error placeat illum vitae omnis tempora dignissimos ab. Facilis vel laborum odio pariatur aut aliquam alias, nobis praesentium, reiciendis delectus, architecto perspiciatis fuga quos nulla itaque?</p>
+         -->
+</body>
+
+</html>

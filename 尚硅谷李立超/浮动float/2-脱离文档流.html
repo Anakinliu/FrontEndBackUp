@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-脱离文档流</title>
+    <style>
+        .box1 {
+            background-color: chartreuse;
+            float: left;
+        }
+        .box2 {
+            background-color: chocolate;
+            float: left;
+        }
+        .s1 {
+            background-color: cyan;
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+        /* 
+            脱离文档流之后,元素的display发生改变.
+            块元素:
+              1. 不再独占一行
+              2. 块元素的高度与宽度不指定值时,默认被内容撑开
+            行内元素:
+                和脱离文档流后的块元素相同.
+            总结:脱离文档流后,大家都一样,并不是float专门的特点
+         */
+    </style>
+</head>
+
+<body>
+    <div class="box1">asdasdadasd</div>
+    <div class="box2">uiyiououiou</div>
+    <span class="s1">DGD</span>
+</body>
+
+</html>

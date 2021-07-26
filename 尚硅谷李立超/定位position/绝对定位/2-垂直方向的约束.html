@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-水平方向的约束</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            position: relative;
+        }
+
+        .box2 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: crimson;
+            top: 0;
+            bottom: 0;
+
+            margin: auto 0;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+
+</body>
+
+</html>

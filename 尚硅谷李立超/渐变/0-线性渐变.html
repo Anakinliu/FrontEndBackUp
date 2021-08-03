@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-线性渐变</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-image: linear-gradient(white, red);
+        }
+
+        .box2 {
+            background-image: linear-gradient(white, red 50px);
+        }
+        .box3 {
+            background-image: repeating-linear-gradient(white, red 50px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 线性渐变可以实现一个颜色向另一个颜色过渡的效果 -->
+    <!-- 渐变是个"图片",即,需要通过 backgroud-image 设置 -->
+    <!-- 
+        可设置的值:
+            to left/bottom/right/top left/bottom/right/top
+            xxdeg 表示角度
+            xturn 表示转几圈,可以浮点数
+     -->
+    <!-- 
+         渐变可以设置多个颜色,多个颜色默认情况下是平均分布的
+         可以指定颜色的起始位置,结束位置是自动计算的
+      -->
+</body>
+从上到下:
+<div class="box1">
+
+</div>
+指定分布情况,指定颜色的起始位置
+<div class="box2">
+
+</div>
+可以平铺的线性渐变:
+<div class="box3">
+
+</div>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        .outer {
+            width: 240px;
+            margin: 10px auto;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .img-wrapper {
+            border: 1px red solid;
+            
+        }
+        .img-wrapper img {
+            display: inline-block;  /*inline or inline-block才会让vertical-align: center起作用*/
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        .info {
+            padding: 12px 18px 18px;
+        }
+        .info h2 {
+            color: #6d716b;
+            padding-bottom: 18px;
+        }
+
+        .info .tag {
+            color: #acaba7;
+            padding-bottom: 22px;
+        }
+        .info .tag i{
+            display: inline-block;
+            padding: 0 6px 0 0;
+        }
+        .info .desp {
+            color: #acaba7;
+            line-height: normal;
+        }
+
+        .star {
+            height: 45px;
+            text-align: center;
+            line-height: 44px;
+            border-top: 1px #e8ebe8 solid;
+            padding: 0 15px;
+        }
+
+        .review {
+            float: left;
+            color: #b6c23c;
+        }
+
+        .jb {
+            float: right;
+            color: #daddd9
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 卡片容器 -->
+    <div class="outer">
+        <!-- 卡片顶部的图片 -->
+        <div class="img-wrapper">
+            <img src="img/1.png" alt="">
+        </div>  
+        <!-- 文字描述区容器 -->
+        <div class="info">
+            <h2>游戏</h2>
+            <p class="tag"><i class="fas fa-angle-double-down"></i>游戏</p>
+            <p class="desp">《赛博朋克 2077》是一款开放世界游戏，故事发生在夜之城。</p>
+        </div>
+        <!-- 评分区容器 -->
+        <div class="star">
+            <div class="review">
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+            </div>
+
+            <div class="jb">
+                <span><i class="fas fa-trophy"></i></span>
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+
+</html>

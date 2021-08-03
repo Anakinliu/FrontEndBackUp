@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <input type="button" id="open" value="点击按钮打开弹框">
+    <div id="container">
+        <!-- 背景黑色遮罩 -->
+        <div id="hidden">
+
+        </div>
+        <div id="box">
+            <strong id="close">关闭</strong>
+            <span>输入账号：<input type="text" placeholder="输入账号"></span>
+            <span>输入密码：<input type="password" placeholder="输入密码"></span>
+            <input type="button" value="登录" id="login">
+        </div>
+    </div>
+    <script>
+        function my$(id) {
+            return document.getElementById(id);
+        }
+
+        // 获取鼠标在页面的位置，处理浏览器兼容性
+        function getPage(e) {
+            var pageX = e.pageX || e.clientX + getScroll().scrollLeft;
+            var pageY = e.pageY || e.clientY + getScroll().scrollTop;
+            return {
+                pageX: pageX,
+                pageY: pageY
+            }
+        }
+
+    </script>
+    <script>
+        var open = my$('open');
+        var box = my$('box');
+        var hidden = my$('hidden');
+        var close = my$('close');
+        open.onclick = function () {
+            // 显示登陆box
+            box.style.display = 'flex';
+            hidden.style.display = 'block';
+        }
+        close.onclick = function () {
+            // 隐藏登陆box
+            box.style.display = 'none';
+            hidden.style.display = 'none';
+            // 关闭后恢复box到原来的默认位置
+            box.style.top = '200px';
+            box.style.left = 'auto';  // 默认值auto
+        }
+        box.onmousedown = function (e) {
+            e = e || window.event;
+            // 盒子的位置
+            var x = getPage(e).pageX - box.offsetLeft;
+            var y = getPage(e).pageY - box.offsetTop;
+            document.onmousemove = function (e) {
+                e = e || window.event;
+                box.style.left = getPage(e).pageX - x + 'px';
+                box.style.top = getPage(e).pageY - y + 'px';
+            }
+        }
+        document.onmouseup = function () {
+            document.onmousemove = null;
+        }
+    </script>
+</body>
+
+</html>

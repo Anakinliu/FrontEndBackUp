@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        body {
+  
+            margin: 0;
+            padding: 0;
+    
+            /* 最小高度就是视口高度 */
+            min-height: 100vh;
+            position: relative;
+            background-color: skyblue;
+            overflow: hidden;
+        }
+
+        /* body的前后加上两个元素 */
+        body::before,
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: 1vh;
+            /* 最小i高,宽 */
+            min-width: 300vw;
+            min-height: 200vh;
+            background-color: #fff;
+            animation: rote 10s linear infinite;
+        }
+
+        body::before {
+            left: -95%;
+            border-radius: 45%;
+            opacity: .5;
+        }
+
+        body::after {
+            left: -95%;
+            border-radius: 46%;
+        }
+
+        @keyframes rote {
+            from {
+                transform: rotateZ(0);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1"></div>
+</body>
+
+</html>

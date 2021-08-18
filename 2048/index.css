@@ -1,0 +1,85 @@
+html,
+body {
+    font-family: "Fira code";
+    background-color: #d7d3b6;
+    font-size: 18px;
+}
+
+.container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+
+.game-body {
+    width: 500px;
+    margin: 0.5em auto;
+    background-color: #999999;
+    border-radius: .5rem;
+    color: white;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    border-radius: .5rem;
+}
+
+.item {
+    background-color: white;
+}
+
+.item-value {
+    font-size: 1.5rem;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: block;
+
+    height: 30px;
+    color: white;
+    background-color: #d9534f;
+    border-radius: 0.5rem;
+    border-width: 0;
+}
+
+/* 警告 */
+.alert {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    top: 1rem;
+}
+/* 警告 */

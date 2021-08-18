@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS提示框</title>
+    <style>
+        .person {
+            position: relative;
+            display: inline-block;
+            background-color: coral;
+        }
+
+        .tooltip {
+            width: 100px;
+            height: 50px;
+            visibility: hidden;
+            position: absolute;
+            background-color: #000;
+            color: cornsilk;
+            z-index: 99;
+            display: inline-block; 
+
+            text-align: center;
+            line-height: 50px;
+
+            left: 50px;
+        }
+
+        .triangle {
+            visibility: hidden;
+            position: absolute;
+            z-index: 99;
+            border-width: 10px;
+            display: inline-block;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+
+            left: 30px;
+            top: 15px;
+        }
+
+        .person:hover .tooltip{
+            visibility: visible;
+        }
+        .person:hover .triangle{
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="article">
+        <div class="person">
+            VIP
+            <div class="triangle">
+
+            </div>
+            <div class="tooltip">
+                你是会员
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

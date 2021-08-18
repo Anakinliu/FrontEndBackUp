@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert">
+            <strong>无效移动!</strong>
+        </div>
+        <h1>2048小游戏</h1>
+        <h3>历史最大的数<span class="history-max"></span></h3>
+        <div class="game-body">
+
+            <div class="row">
+                <div class="item" x="0" y="0"><span class="item-value">2048</span></div>
+                <div class="item" x="0" y="1"><span class="item-value">2048</span></div>
+                <div class="item" x="0" y="2"><span class="item-value">2048</span></div>
+                <div class="item" x="0" y="3"><span class="item-value">2048</span></div>
+            </div>
+            <div class="row">
+                <div class="item" x="1" y="0"><span class="item-value">2048</span></div>
+                <div class="item" x="1" y="1"><span class="item-value">2048</span></div>
+                <div class="item" x="1" y="2"><span class="item-value">2048</span></div>
+                <div class="item" x="1" y="3"><span class="item-value">2048</span></div>
+            </div>
+            <div class="row">
+                <div class="item" x="2" y="0"><span class="item-value">2048</span></div>
+                <div class="item" x="2" y="1"><span class="item-value">2048</span></div>
+                <div class="item" x="2" y="2"><span class="item-value">2048</span></div>
+                <div class="item" x="2" y="3"><span class="item-value">2048</span></div>
+            </div>
+            <div class="row">
+                <div class="item" x="3" y="0"><span class="item-value">2048</span></div>
+                <div class="item" x="3" y="1"><span class="item-value">2048</span></div>
+                <div class="item" x="3" y="2"><span class="item-value">2048</span></div>
+                <div class="item" x="3" y="3"><span class="item-value">2048</span></div>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <button class="btn fresh">再来一局</button>
+            <p>移动了<span class="step-count">0</span>次</p>
+            <p>本局最大的数<span class="max-cell"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>

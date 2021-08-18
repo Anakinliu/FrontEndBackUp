@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>延迟</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .d1 {
+            display: flex;
+            position: relative;
+            box-sizing: border-box;
+            width: 32rem;
+            height: 32rem;
+            margin: 0 auto;
+            border: 2rem red solid;
+            padding: 4rem;
+            transition-duration: 4s;
+            transition-property: all;
+        }
+        .d1:hover {
+            transform: rotate(360deg);
+        }
+        .d2 {
+            top: 5rem;
+            left: 5rem;
+            position: absolute;
+            box-sizing: content-box;
+            width: 16rem;
+            height: 16rem;
+            border: 1rem teal dashed;
+            transition-property: all;
+            transition-duration: 4s;
+        }
+        .d3 {
+            box-sizing: border-box;
+            width: 12rem;
+            height: 12rem;
+            margin: auto;
+            background-color: tomato;
+            transition-property: all;
+            transition-duration: 4s;
+        }
+
+        .d3:hover {
+            width: 16rem;
+            height: 16rem;
+            background-color: rgb(241, 36, 0);
+        }
+
+        .d3:hover .d2 {
+            top: 0rem;
+            left: 0rem;
+            border-width: 6rem;
+            /* margin-top: -4rem;
+            margin-left: -4rem; */
+
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        
+        <div class="d3">
+            <div class="d2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

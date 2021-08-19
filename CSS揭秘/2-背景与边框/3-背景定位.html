@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-背景定位</title>
+    <style>
+.div1 {
+    width: 300px;
+    height: 300px;
+    margin: 10rem;
+    background: url('a.jpg') no-repeat red;
+    background-size: 100px 100px;
+    background-position: left 100px top 100px;
+
+}
+.div2 {
+    width: 300px;
+    height: 300px;
+    margin: 10rem;
+    border: 10px black dashed;
+    padding: 10px;
+    background: url('a.jpg') no-repeat green;
+    background-origin: content-box;
+}
+
+.div3 {
+    width: 300px;
+    height: 300px;
+    margin: 10rem;
+    border: 10px black dashed;
+    padding: 10px;
+    background: url('a.jpg') no-repeat green;
+    background-position: calc(100% - 10px) calc(100% - 10px);
+}
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+
+    </div>
+    <div class="div2">
+
+    </div>
+    <div class="div3">
+
+    </div>
+</body>
+
+</html>

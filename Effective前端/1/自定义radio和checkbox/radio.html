@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义radio</title>
+    <style>
+        input[type="radio"] {
+            display: none;
+        }
+
+        .my-radio {
+            display: inline-block;
+            width: .5rem;
+            height: .5rem;
+            border: gray 2px solid;
+            border-radius: 50%;
+            padding: 2px;
+        }
+
+        input[type="radio"]:checked+.my-radio {
+            border: red 2px solid;
+            background-color: green;
+            background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <p>Please select your preferred contact method:</p>
+        <div>
+            <input type="radio" id="contactChoice1" name="contact" value="email">
+            <span class="my-radio"></span>
+            <label for="contactChoice1">Email</label>
+
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <span class="my-radio"></span>
+            <label for="contactChoice2">Phone</label>
+
+            <input type="radio" id="contactChoice3" name="contact" value="mail">
+            <span class="my-radio"></span>
+            <label for="contactChoice3">Mail</label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script>
+        let p1 = document.querySelector("#contactChoice1");
+        p1.addEventListener('click', () => {
+            console.log("选中了!!!");
+        })
+    </script>
+</body>
+
+</html>

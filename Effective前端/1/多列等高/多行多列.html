@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    display: table;
+    /* 使用边框 td之间的间距 水平,垂直*/
+    border-spacing: 1rem 2rem;
+    width: 100vw;
+
+}
+
+.row {
+    display: table-row;
+    min-height: 50vh;
+}
+
+.col {
+    display: table-cell;
+
+    width: 1000px;
+    /* 设置width之后,这些col会平分这个宽度 */
+
+    padding: 1rem;
+    background: rgba(177, 177, 177, 0.787);
+    border: 1px black solid;
+    border-radius: 1rem;
+}
+.mid-row {
+    display: none;
+}
+/* 显示媒体查询 */
+@media (max-width: 500px) {
+    .main {
+        display: block;
+    }
+
+    .col {
+        display: block;
+        width: 100vw;
+    }
+}
+/* 变成两栏布局 */
+@media (min-width: 501px) and (max-width: 1024px) {
+    /* 新的row */
+    .mid-row {
+        display: table-row;
+    }
+    /* 原先的row变为普通div */
+    .row {
+        display: block;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <div class="row">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam maxime dicta voluptatum praesentium,
+                    neque alias quis nostrum eius minus accusamus? Maiores culpa nulla consequuntur natus ratione
+                    necessitatibus. Unde, porro dolores?</p>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad culpa laboriosam animi illo eveniet hic
+                    ullam
+                    iure quidem molestiae quaerat exercitationem nemo soluta aliquid ex, minus atque provident nobis
+                    aspernatur!
+                    Consectetur illum in molestias earum quisquam laudantium aliquid, temporibus libero eius error ab
+                    omnis
+                    suscipit, nulla delectus accusamus veritatis animi perferendis cum optio provident amet voluptas.
+                    Provident quam obcaecati minima.</p>
+            </div>
+            <div class="mid-row"></div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam maxime dicta voluptatum praesentium,
+                    neque alias quis nostrum eius minus accusamus? Maiores culpa nulla consequuntur natus ratione
+                    necessitatibus. Unde, porro dolores?</p>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad culpa laboriosam animi illo eveniet hic
+                    ullam
+                    iure quidem molestiae quaerat exercitationem nemo soluta aliquid ex, minus atque provident nobis
+                    aspernatur!
+                    Consectetur illum in molestias earum quisquam laudantium aliquid, temporibus libero eius error ab
+                    omnis
+                    suscipit, nulla delectus accusamus veritatis animi perferendis cum optio provident amet voluptas.
+                    Provident quam obcaecati minima.</p>
+            </div>
+        </div>
+        <!-- 下面的不会变,因为没有用  <div class="mid-row"></div> -->
+        <div class="row">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam maxime dicta voluptatum praesentium,
+                    neque alias quis nostrum eius minus accusamus? Maiores culpa nulla consequuntur natus ratione
+                    necessitatibus. Unde, porro dolores?</p>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad culpa laboriosam animi illo eveniet hic
+                    ullam
+                    iure quidem molestiae quaerat exercitationem nemo soluta aliquid ex, minus atque provident nobis
+                    aspernatur!
+                    Consectetur illum in molestias earum quisquam laudantium aliquid, temporibus libero eius error ab
+                    omnis
+                    suscipit, nulla delectus accusamus veritatis animi perferendis cum optio provident amet voluptas.
+                    Provident quam obcaecati minima.</p>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam maxime dicta voluptatum praesentium,
+                    neque alias quis nostrum eius minus accusamus? Maiores culpa nulla consequuntur natus ratione
+                    necessitatibus. Unde, porro dolores?</p>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad culpa laboriosam animi illo eveniet hic
+                    ullam
+                    iure quidem molestiae quaerat exercitationem nemo soluta aliquid ex, minus atque provident nobis
+                    aspernatur!
+                    Consectetur illum in molestias earum quisquam laudantium aliquid, temporibus libero eius error ab
+                    omnis
+                    suscipit, nulla delectus accusamus veritatis animi perferendis cum optio provident amet voluptas.
+                    Provident quam obcaecati minima.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

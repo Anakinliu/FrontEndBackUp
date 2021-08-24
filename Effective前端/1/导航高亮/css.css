@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    width: 80vh;
+    height: 30px;
+    background-color: darkslategrey;
+    margin: 5vh auto;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    list-style: none;
+    line-height: 30px;
+}
+
+.navbar li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: white;
+}
+
+body.home .navbar li.home a {
+    color: white;
+}
+body.tags .navbar li.tags a {
+    color: white;
+}
+body.about .navbar li.about a {
+    color: white;
+}

@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    width: 80vh;
+    height: 30px;
+    background-color: darkslategrey;
+    margin: 5vh auto;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    list-style: none;
+    line-height: 30px;
+}
+
+.navbar li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: white;
+}
+
+li.home a {
+    color: white;
+}
+
+
+#menu {
+    display: none;
+    background-color: aquamarine;
+}
+
+#menu:before {
+    content: '';
+    position: relative;
+    left: 0;
+    top: -10px;
+    display: block;
+    background-color: darkslategrey;
+    width: 10px;
+    height: 10px;
+}
+
+li.home a:hover  + #menu {
+    display: block;
+}
+
+#menu:hover {
+    display: block;
+
+}
+
+#menu .menu-item:hover {
+    background-color: darkslategrey;
+}

@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2-outline双重边框</title>
     <style>
-div {
+.div1 {
     width: 100px;
     height: 100px;
+    background-color: brown;
+    outline: black dashed 2px;
+    outline-offset: -10px;
+}
+.div2 {
+    width: 100px;
+    height: 100px;
+    margin: 10rem auto;
+    border-radius: 50%;
     background-color: brown;
     outline: black dashed 2px;
     outline-offset: -10px;
@@ -18,7 +27,10 @@ div {
 </head>
 
 <body>
-    <div>
+    <div class="div1">
+        
+    </div>
+    <div class="div2">
         
     </div>
 </body>

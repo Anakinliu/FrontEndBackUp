@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个选择器多个伪元素</title>
+    <style>
+        .div1::before,
+        .div1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"><p>123</p></div>
+</body>
+
+</html>

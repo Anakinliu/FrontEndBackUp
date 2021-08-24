@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-scale0隐藏</title>
+    <style>
+        .div1 {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transform: scale(0, 0);
+        }
+
+        .div2 {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 元素仍在页面中占据位置，但
+是不会响应绑定的监听事件。 -->
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <script>
+        let d1 = document.querySelectorAll("div");
+        for (let div of d1) {
+            div.addEventListener('click', () => {
+            alert('alickkk');
+        })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+:root {
+     box-sizing: border-box;       
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: fira-code;
+
+}
+
+body * + *{
+    margin-top: 1.5rem;
+}
+
+header {
+    padding: 1em 1.5em;
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+    margin-bottom: 1.5em;
+}
+
+.main {
+    padding: 0 1.5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+.media {
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+    width: calc(50% - 1.5em);
+    padding: 1.5em;
+    background-color: #eee;
+    border-radius: .5rem;
+}
+
+.media:nth-child(2n+1) {
+    clear: left;
+}
+
+.clearfix::before,
+.clearfix::after {
+    /* 使用display: table 清除浮动时能够包含外边距 */
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+/* 选中main div 末尾的伪元素 */
+.clearfix::after { 
+    /* display设为非inline,指定content,以便让伪元素出现在文档中 */
+    display: block;
+    content: ' ';
+    clear: both;
+}
+
+.media-image {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+.media-body {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.media-body h4 {
+    margin-top: 0;
+}
+

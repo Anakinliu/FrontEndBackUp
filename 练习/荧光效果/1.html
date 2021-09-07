@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荧光效果</title>
+    <style>
+        :root {
+            /* Base font size */
+            font-size: 10px;
+
+            /* Set neon color */
+            --neon-text-color: #f40;
+            --neon-border-color: #08f;
+        }
+
+        html,
+        body {
+            background-color: black;
+        }
+
+        .war {
+            font-size: 13rem;
+            font-weight: 200;
+            font-style: italic;
+            color: #fff;
+            padding: 4rem 6rem 5.5rem;
+            border: 0.4rem solid #fff;
+            border-radius: 2rem;
+            text-transform: uppercase;
+            animation: light 1.5s infinite alternate;
+
+        }
+
+        @keyframes light {
+
+            0%,
+            19%,
+            21%,
+            23%,
+            25%,
+            54%,
+            56%,
+            100% {
+
+                text-shadow:
+                    -0.2rem -0.2rem 1rem #fff,
+                    0.2rem 0.2rem 1rem #fff,
+                    0 0 2rem var(--neon-text-color),
+                    0 0 4rem var(--neon-text-color),
+                    0 0 6rem var(--neon-text-color),
+                    0 0 8rem var(--neon-text-color),
+                    0 0 10rem var(--neon-text-color);
+
+                box-shadow:
+                    0 0 .5rem #fff,
+                    inset 0 0 .5rem #fff,
+                    0 0 2rem var(--neon-border-color),
+                    inset 0 0 2rem var(--neon-border-color),
+                    0 0 4rem var(--neon-border-color),
+                    inset 0 0 4rem var(--neon-border-color);
+            }
+        }
+    </style>
+</head>
+<h1 class="war">HELLO</h1>
+
+<body>
+
+</body>
+
+</html>

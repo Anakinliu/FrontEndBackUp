@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="list">
+        <li class="item">
+            item1
+            <button>delete</button>
+        </li>
+        <li class="item">
+            item2
+            <button>delete</button>
+        </li>
+        <li class="item">
+            item3
+            <button>delete</button>
+        </li>
+    </ul>
+    <script>
+        // let items = document.querySelectorAll(".item");
+        // for (let item of items) {
+        //     item.addEventListener('click', (e) => {
+        //         e.target.style.display = 'none'
+        //         console.log(e.target);
+        //     }, false)
+        // }
+        let bts = document.querySelectorAll("button");
+        for (let btn of bts) {
+            btn.addEventListener('click', (e) => {
+                // e.target.style.display = 'none'
+                // console.log(e.target);
+                console.log(e.target.parentElement);
+                e.target.parentElement.remove();
+            }, true)
+        }
+    </script>
+</body>
+
+</html>

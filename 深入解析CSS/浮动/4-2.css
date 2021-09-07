@@ -1,0 +1,139 @@
+:root {
+     box-sizing: border-box;       
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: fira-code;
+
+}
+
+/* 猫头鹰样式 */
+body * + *{
+    margin-top: 1.5rem;
+}
+
+header {
+    padding: 1em 1.5em;
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+    margin-bottom: 1.5em;
+}
+
+.main {
+    padding: 0 1.5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+.media {
+    /* float: left; */
+    /* margin: 0 1.5em 1.5em 0; */
+    /* width: calc(50% - 1.5em); */
+    padding: 1.5em;
+    background-color: #eee;
+    border-radius: .5rem;
+}
+
+/* .media:nth-child(2n+1) {
+    clear: left;
+} */
+
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+/* 选中main div 末尾的伪元素 */
+.clearfix::after { 
+    /* display设为非inline,指定content,以便让伪元素出现在文档中 */
+    display: block;
+    content: ' ';
+    clear: both;
+}
+
+.media-image {
+    float: left;
+    margin-right: 1.5rem;
+}
+
+.media-body {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.media-body h4 {
+    margin-top: 0;
+}
+
+.row::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.row {
+    margin: 0 -0.75em;
+}
+
+[class*="column-"] {
+    float: left;
+    /* 网格之间形成间隔 , 不用margin是因为margin影响宽度百分比*/
+    padding: 0 0.75em;
+
+    /* 顶部对齐 */
+    margin-top: 0;
+}
+
+.column-1 {
+    width: 8.3333%;
+}
+.column-2 {
+    width: 16.6667%;
+}
+.column-3 {
+width: 25%;
+}
+.column-4 {
+width: 33.3333%;
+}
+.column-5 {
+width: 41.6667%;
+}
+.column-6 {
+    width: 50%;
+}
+.column-7 {
+width: 58.3333%;
+}
+.column-8 {
+width: 66.6667%;
+}
+.column-9 {
+width: 75%;
+}
+.column-10 {
+width: 83.3333%;
+}
+.column-11 {
+width: 91.6667%;
+}
+.column-12 {
+width: 100%;
+}
+

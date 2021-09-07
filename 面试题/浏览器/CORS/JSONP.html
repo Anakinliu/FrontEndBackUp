@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONP</title>
+</head>
+
+<body>
+    <script>
+// src拿到的东西就成为当前文档的一个script标签,会被当成js脚本执行
+let scriptEle = document.createElement('script');
+scriptEle.type = 'text/javascript';
+scriptEle.src = 'http://127.0.0.1:3060/para?age=24&myCallback';
+document.head.appendChild(scriptEle);
+// 定义得到响应后要执行的函数
+function myCallback(para) {
+    // 服务器可以使用para向前端传递数据.
+    console.log('拿到了!', para);
+}
+    </script>
+</body>
+
+</html>

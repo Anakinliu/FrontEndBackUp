@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            width: 100%;
+        }
+        .left {
+            float: left;
+            width: 25%;
+            background-color: cadetblue;
+            margin-right: 10px;
+            /* margin-right: 2%; */
+        }
+
+        .right {
+            float: left;
+            width: 73%;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- 拖动窗口的宽度,发现,宽度小于500px时,会变成两行 -->
+        <div class="left"><span>LEFT</span></div>
+        <div class="right"><span>RIGHT</span></div>
+    </div>
+
+</body>
+
+</html>

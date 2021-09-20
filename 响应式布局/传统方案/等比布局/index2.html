@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框不能设置百分比怎么办</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            width: 100%;
+        }
+        .left {
+            float: left;
+            width: 25%;
+            background-color: cadetblue;
+        }
+        .fill {
+            border-width: 0 10px 0 0;
+            border-style: solid;
+            border-color: green;
+        }
+
+        .right {
+            float: left;
+            width: 73%;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- 边框不能设置百分比,怎么办? -->
+        <!-- 在外面加一个div啊! -->
+        <div class="left"><span>LEFT</span></div>
+        <div class="fill"></div>
+        <div class="right"><span>RIGHT</span></div>
+    </div>
+
+</body>
+
+</html>

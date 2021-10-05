@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .one, .two, .four {
+            position: absolute;
+        }
+        .one {
+            margin: 10px;
+            background-color: chartreuse;
+            z-index: 10;
+        }
+        .two {
+            background-color: cornflowerblue;
+            z-index: 100;
+        }
+        .three {
+            margin: 20px;
+            background-color:red;
+            z-index: 0;
+        }
+        .four {
+            margin: -20px;
+            background-color: yellow;
+            z-index: 50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+    <div class="three"></div>
+    <div class="four"></div>
+
+</body>
+
+</html>

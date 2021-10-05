@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate影响reflow吗</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .d1 {
+            background-color: burlywood;
+        }
+        .d2 {
+            background-color: cornflowerblue;
+        }
+        .d3 {
+            width: 1px;
+            height: 1px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="d1"></div>
+    <div class="d2"></div>
+    <div id="box2" class="d3"></div>
+    <script>
+        let d1 = document.querySelector("#box")
+        let d2 = document.querySelector("#box2")
+        let x = 5;
+        let y = 5;
+        setInterval(() => {
+            d1.style.transform = `translate(${x}px,${y}px)`
+
+            d2.style.width = `${x}px`;
+            d2.style.height = `${y}px`;
+
+            x += x;
+            y += y;
+        }, 1000)
+    </script>
+</body>
+
+</html>

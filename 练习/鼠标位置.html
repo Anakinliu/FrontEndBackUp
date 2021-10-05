@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            /* background-color: cadetblue; */
+            border: chartreuse 1px solid;
+
+            background-image: linear-gradient(to bottom right,
+                    transparent 0%,
+                    transparent calc(50% - 1px),
+                    red 50%,
+                    transparent calc(50% + 1px),
+                    transparent 100%),
+                linear-gradient(to top right,
+                    transparent 0%,
+                    transparent calc(50% - 1px),
+                    red 50%,
+                    transparent calc(50% + 1px),
+                    transparent 100%);
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="box"></div>
+    <script>
+        let box = document.querySelector("#box");
+        box.addEventListener('mousemove', (e) => {
+            if (e.offsetX > e.offsetY) {
+                console.log('右上三角形');
+            } else if (e.offsetX === e.offsetY) {
+                console.log("中间的线");
+            } else {
+                console.log("左下三角形");
+            }
+            // console.log(e.offsetX);
+        })
+    </script>
+</body>
+
+</html>

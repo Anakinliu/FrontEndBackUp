@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .npc {
+            height: 50px;
+            background-color: teal;
+        }
+
+
+        .out {
+            margin-top: 10px;
+            height: 200px;
+            background-color: tomato;
+        }
+
+        .a,
+        .b {
+            height: 50px;
+        }
+
+        .a {
+            margin-top: 10px;
+            background-color: yellow;
+        }
+
+        .b {
+            margin-top: 10px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="npc"></div>
+    <p>父元素的第一个子元素的margin的上下margin会导致父元素的margin(左右margin正常),解决方法:1.设置父元素pading曲线救国2. 父元素创建BFC3. 父元素设置border</p>
+    <div class="out">
+        <div class="a"></div>
+        <div class="b"></div>
+    </div>
+</body>
+
+</html>

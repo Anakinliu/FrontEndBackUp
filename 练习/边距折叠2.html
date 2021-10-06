@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .npc {
+            height: 50px;
+            background-color: teal;
+        }
+
+
+        .out {
+
+            height: 200px;
+            background-color: tomato;
+        }
+
+        .a,
+        .b {
+            height: 50px;
+        }
+
+        .a {
+            margin-bottom: 25px;
+            background-color: yellow;
+        }
+
+        .b {
+            margin-top: 25px;
+            background-color: green;
+
+        }
+        .box {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="npc"></div>
+    <p>相邻元素之间的margin导致margin合并,效果就是,只有偏大的margin生效,而非两个margin之和,解决方法:套一个box,对box创建BFC</p>
+    <div class="out">
+        <div class="box">
+            <div class="a"></div>
+        </div>
+        <div class="box">
+            <div class="b"></div>
+        </div>
+    </div>
+</body>
+
+</html>

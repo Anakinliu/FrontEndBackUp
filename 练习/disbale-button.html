@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls0 .cls1 {
+            width: 200px;
+        }
+
+        div#id {
+            width: 300px;
+        }
+
+        #id.cls0 {
+            width: 400px;
+        }
+
+        div.cls0 {
+            width: 500px;
+        }
+
+        #p1 {
+            font-size: 16px;
+        }
+
+        #p2 {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="bt">123</button>
+    <div id="id" class="cls0 cls1" style="width: 100px;"></div>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo sint odit. Ea eaque
+        pariatur saepe porro, esse sequi deleniti non eveniet voluptatibus debitis fuga? Fugiat quasi provident
+        praesentium iure.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo sint odit. Ea eaque
+        pariatur saepe porro, esse sequi deleniti non eveniet voluptatibus debitis fuga? Fugiat quasi provident
+        praesentium iure.</p>
+    <script>
+        let d = document.querySelector("#bt");
+        // d.setAttribute("disabled", false)  // OK
+        // d.setAttribute("disabled", true)  // OK
+        d.disabled = false; // OK
+        console.log();
+    </script>
+</body>
+
+</html>

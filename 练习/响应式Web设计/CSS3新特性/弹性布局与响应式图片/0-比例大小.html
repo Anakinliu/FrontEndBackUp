@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用比例大小</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Wrap {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .Header {
+            width: 100%;
+            height: 130px;
+            background-color: brown;
+        }
+
+        .WrapMiddle {
+            width: 100%;
+            display: flex;
+        }
+
+        /* .Left {
+            height: 625px;
+            width: 20.83333%;
+            background-color: cadetblue;
+            display: inline-block;
+        } */
+
+        .Left {
+            height: 625px;
+            background-color: #000000;
+            display: inline-block;
+            position: absolute;
+            left: -200px;
+            width: 200px;
+            font-size: .9rem;
+            transition: transform .5s;
+        }
+
+        /* 点击btn时,添加此类到Left div 上以达到移出效果 */
+        .over {
+            transform: translate(200px, 0);
+        }
+
+        .Middle {
+            height: 625px;
+            width: 100vw;
+            background-color: chartreuse;
+            display: inline-block;
+        }
+
+        .Right {
+            height: 625px;
+            width: 0px;
+            display: none;
+            background-color: cornflowerblue;
+            display: inline-block;
+        }
+
+        .Footer {
+            height: 200px;
+            width: 100%;
+            background-color: gray;
+        }
+
+        .Wrap p {
+            color: white;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block; 
+            width: 2rem; 
+            height: 2rem;
+        }
+
+        @media (min-width: 30rem) {
+            .Left {
+                width: 20.8%;
+                left: 0;
+                position: relative;
+            }
+
+            .btn {
+                display: none;
+            }
+
+            .Middle {
+                width: 68.75%;
+            }
+
+            .Right {
+                width: 10.41667%;
+                display: inline-block;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- <div class="Wrap">
+        <div class="Header">
+            <p >顶部导航栏</p>
+            <button id="btn">显示</button>
+        </div>
+        <div class="WrapMiddle">
+            <div class="Left">
+                <p>左边栏</p>
+            </div>
+            <div class="Middle">
+                <p>中间栏</p>
+            </div>
+            <div class="Right">
+                <p>右边栏</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <p>底栏</p>
+        </div>
+    </div> -->
+    <div class="Wrap">
+        <div class="Header">
+
+            <div style="display: flex; height: 100%; align-items: center; justify-content: space-around;">
+                <button class="btn" >显示</button>
+                <button class="btn" >显示</button>
+                <button class="btn" >显示</button>
+                <button class="btn">显示</button>
+            </div>
+        </div>
+        <div class="WrapMiddle">
+            <div class="Left">
+                <div class="left-content">
+                    <p>左边栏</p>
+                </div>
+            </div>
+            <div class="Middle">
+                <p>中间栏</p>
+            </div>
+            <div class="Right">
+                <p>右边栏</p>
+            </div>
+        </div>
+        <div class="Footer">
+            <p>底栏</p>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector(".btn")
+        let left = document.querySelector(".Left");
+
+        btn.addEventListener("click", (e) => {
+            // 存在over则删除,否则添加over
+            left.classList.toggle("over");
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原生dom获取表单</title>
+</head>
+
+<body>
+    <form id="login-form">
+        <input name="user" type="text">
+        <input name="pass" type="password">
+    </form>
+    <hr>
+
+    <button id="show">显示表单元素</button>
+</body>
+<script>
+    let form = document.forms.namedItem("login-form")
+    let b = document.getElementById("show");
+    b.addEventListener("click", function (e) {
+        console.log('username: ', form.user.value);
+        console.log('password: ', form.pass.value);
+    })
+</script>
+
+</html>

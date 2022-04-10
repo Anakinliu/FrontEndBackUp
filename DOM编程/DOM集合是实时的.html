@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM集合是实时的</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul><button id="add">添加一个li</button>
+    <script>
+        let domSet = document.getElementById("list").childNodes;
+        console.log(domSet);
+        document.getElementById("add").addEventListener('click', (e) => {
+            console.log("点击了按钮");
+            document.getElementById("list").appendChild(document.createElement("li"))
+            console.log('新的domSet： ', domSet);
+        })
+    </script>
+</body>
+
+</html>

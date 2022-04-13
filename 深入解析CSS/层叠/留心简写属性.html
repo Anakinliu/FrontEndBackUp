@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留心简写属性</title>
+    <style>
+        .out {
+            font-weight: bold;
+        }
+
+        /* font这个简写属性中包含了font-weight属性，因为没有写明，所以被设置为了初始值 */
+        p {
+            font: 1rem Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        123
+        <p>123</p>
+    </div>
+</body>
+
+</html>

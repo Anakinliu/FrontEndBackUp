@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em同时用于fontsize和其他</title>
+    <style>
+        .out {
+            font-size: 10px;
+        }
+
+        .in {
+            font-size: 20px;
+        }
+
+        .p1 {
+            padding: 1.5em;
+            background-color: orangered;
+        }
+
+        .p2 {
+            font-size: 1.5em;
+            padding: 1.5em;
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div class="in">
+            <p class="p1">123</p>
+            <p class="p2">123</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em嵌套问题的解决方法</title>
+    <style>
+        body {
+            font-size: 100px;
+        }
+
+        div {
+            font-size: 0.5em;
+        }
+
+        div div {
+            font-size: 1em;
+        }
+
+        ul {
+            font-size: 0.5em;
+        }
+
+        ul ul {
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <p>123</p>
+        <div class="d2">
+            <p>456</p>
+            <div class="d3">
+                <p>789</p>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <p>123</p>
+            <ul>
+                <li>
+                    <p>456</p>
+                    <ul>
+                        <li>
+                            <p>789</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

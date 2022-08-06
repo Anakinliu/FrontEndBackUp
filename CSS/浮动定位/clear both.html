@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear both</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 600px;
+            border: 6px dashed #f0c;
+        }
+
+        .box1 {
+            box-sizing: border-box;
+            height: 200px;
+            width: 400px;
+            border: 3px dashed black;
+            float: left;
+        }
+
+        .box2 {
+            box-sizing: border-box;
+            height: 150px;
+            width: 200px;
+            border: 3px dashed greenyellow;
+            float: left;
+
+        }
+
+        .box3 {
+            box-sizing: border-box;
+            height: 250px;
+            width: 600px;
+            border: 3px dashed blue;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上下左右</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: white;
+        }
+
+        .box {
+            height: 800px;
+            width: 1200px;
+            margin: 10px auto;
+            background-color: white;
+            border: 3px dashed gray;
+        }
+
+        .header {
+            height: 70px;
+            width: 1200px;
+            background-color: yellowgreen;
+        }
+
+
+        .sidebar {
+            float: left;
+            height: 600px;
+            width: 300px;
+            background-color: gray;
+        }
+
+        .sidebar .avator {
+            height: 150px;
+            margin: 75px 75px;
+            border-radius: 50%;
+        }
+
+        .sidebar ul li {
+            list-style: none;
+            margin: 16px auto;
+            text-align: center;
+        }
+
+        .content {
+            float: left;
+            box-sizing: border-box;
+            width: 700px;
+            height: 600px;
+            padding: 0 1em;
+            background-clip: content-box;
+            background-color: black;
+            color: gray;
+            overflow: auto;
+        }
+
+        .content .article {
+            padding: 16px;
+            border-bottom: 3px solid pink;
+        }
+
+        .content .article h3 {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .catalog {
+            float: left;
+            height: 600px;
+            width: 200px;
+            background-color: gray;
+        }
+        .footer {
+            height: 130px;
+            background-color: rgb(211, 209, 209);
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="app">
+        <div class="header"></div>
+        <div class="sidebar">
+            <div>
+                <img class="avator" src="https://i.pinimg.com/736x/eb/d0/02/ebd002f69ccba8c11d7a35aef69a820e.jpg"
+                    alt="">
+            </div>
+            <ul>
+                <li>全部</li>
+                <li>全部</li>
+                <li>全部</li>
+                <li>全部</li>
+                <li>全部</li>
+                <li>全部</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="article">
+                <h3>这是一个文章</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla atque ratione, cumque
+                    cupiditate distinctio repellendus animi? Omnis deleniti, nobis assumenda id quod eum ab accusamus
+                    fugiat? Cumque, nesciunt voluptas.</p>
+            </div>
+            <div class="article">
+                <h3>这是一个文章</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla atque ratione, cumque
+                    cupiditate distinctio repellendus animi? Omnis deleniti, nobis assumenda id quod eum ab accusamus
+                    fugiat? Cumque, nesciunt voluptas.</p>
+            </div>
+            <div class="article">
+                <h3>这是一个文章</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla atque ratione, cumque
+                    cupiditate distinctio repellendus animi? Omnis deleniti, nobis assumenda id quod eum ab accusamus
+                    fugiat? Cumque, nesciunt voluptas.</p>
+            </div>
+            <div class="article">
+                <h3>这是一个文章</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla atque ratione, cumque
+                    cupiditate distinctio repellendus animi? Omnis deleniti, nobis assumenda id quod eum ab accusamus
+                    fugiat? Cumque, nesciunt voluptas.</p>
+            </div>
+        </div>
+        <div class="catalog"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上中下</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            border: .2em dashed pink;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(60, 60, 60);
+        }
+
+        .content {
+            width: 100%;
+            height: 400px;
+            background-color: gray;
+        }
+
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(60, 60, 60);
+        }
+
+        .nav {
+            height: 100%;
+            text-align: center;
+            padding-top: 5%;
+            font-size: 0;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 0 1em;
+            font-size: 2rem;
+            color: aliceblue;
+            text-decoration: none;
+            background-color: gray;
+            border: .1em solid gray;
+        }
+
+        .nav a:hover {
+            background-color: rgb(60, 60, 60);
+            border: .1em solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <div class="nav">
+                <a href="#">我</a>
+                <a href="#">是</a>
+                <a href="#">M</a>
+                <a href="#">C</a>
+            </div>
+        </div>
+        <div class="content"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>

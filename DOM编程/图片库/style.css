@@ -1,0 +1,10 @@
+a {
+    font-size: 3rem;
+}
+.img {
+    display: block;
+    width: 300px;
+    height: 600px;
+    background-color: burlywood;
+    border: 2px solid gray;
+}

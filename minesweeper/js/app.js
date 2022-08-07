@@ -13,7 +13,7 @@ audioWin.preload = "auto";
 const localMineCount = localStorage.getItem('userMine') ? parseInt(localStorage.getItem('userMine')) : 10;
 const localSeed = localStorage.getItem('userSeed') ? parseInt(localStorage.getItem('userSeed')) : 10;
 // console.log(`加载：localMineCount： ${localMineCount}`);
-console.log(localMineCount >= 432);
+// console.log(localMineCount >= 432);
 function play(audio) {
     // TODO 解决：多次连点声音只播放一下
     if (audio.ended === false) {
@@ -78,11 +78,9 @@ const app = Vue.createApp({
         }
     },
     mounted() {
+        this.mineCount = (localMineCount >= this.row * this.col) ? 10 : localMineCount;
         this.restartGame();
         console.log('created...');
-    },
-    created() {
-        this.mineCount = (localMineCount >= this.row * this.col) ? 10 : localMineCount;
     },
     watch: {
         mineCount(v, oldV) {
@@ -109,7 +107,7 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        restartGame(v, oldV) {
+        restartGame() {
             // if (null === localStorage.getItem('userMine')) {
             //     localStorage.setItem('userMine', this.mineCount);
             // } else {
@@ -177,9 +175,7 @@ const app = Vue.createApp({
                 this.generateAnswer();
                 this.firstStep = false;
                 // console.log('first click is done');
-                let c = bfs(this.boardArr, this.visibleArr, this.flagArr, 0, rIdx, cIdx, this.row, this.col);
-                console.log('c: ', c);
-                this.flagCount += c;
+                this.flagCount += bfs(this.boardArr, this.visibleArr, this.flagArr, 0, rIdx, cIdx, this.row, this.col);
                 play(audioClick);  // PLAY
             } else {
                 if (true === this.isGameOver) {
@@ -188,11 +184,8 @@ const app = Vue.createApp({
                 } else {
                     // 正常游戏流程的点击
                     if (false === isNaN(this.boardArr[rIdx][cIdx])) {// 非 雷 cell
-                        console.log('in this');
                         play(audioClick);
-                        let c = bfs(this.boardArr, this.visibleArr, this.flagArr, 0, rIdx, cIdx, this.row, this.col);
-                        console.log('c: ', c);
-                        this.flagCount += c;
+                        this.flagCount += bfs(this.boardArr, this.visibleArr, this.flagArr, 0, rIdx, cIdx, this.row, this.col);
                     } else { // 点中雷   
                         this.visibleArr[rIdx][cIdx] = true;
                         this.isGameOver = true;

@@ -25,30 +25,40 @@ function play(audio) {
     audio.play();
 }
 
-function bfs(arr1, arr2, r, c, rLim, cLim) {// 0区域向外扩展，直到遇到标号区域
-    // arr1: 标号数组， arr2：可见性数组
-    if (0 < arr1[r][c]) {
-        arr2[r][c] = true;
-        return
+function bfs(arr1, arr2, arr3, count, r, c, rLim, cLim) {// 0区域向外扩展，直到遇到标号区域
+    // arr1: 标号数组， arr2：可见性数组,arr3: flag数组
+    // 返回揭开的cell中被插上flag的个数
+    if (true === arr2[r][c]) {  // 递归结束条件：访问过的正好用到arr2标记，避免无限循环调用访问造成栈溢出
+        return count;
     }
-    if (true === arr2[r][c]) {  // 访问过的正好用到arr2标记，避免无限循环调用访问造成栈溢出
-        return
+    if (0 < arr1[r][c]) {  // 标号 cell
+        arr2[r][c] = true;
+        if (true === arr3[r][c]) {
+            arr3[r][c] = false;
+            count += 1;
+        }
+        return count;
     }
     if (arr1[r][c] === 0) {
+        if (true === arr3[r][c]) {
+            arr3[r][c] = false;
+            count += 1;
+        }
         arr2[r][c] = true;
     }
-    if (c + 1 < cLim) {
-        bfs(arr1, arr2, r, c + 1, rLim, cLim);
+    if (c + 1 < cLim) {  // 右
+        count = bfs(arr1, arr2, arr3, count, r, c + 1, rLim, cLim);
     }
-    if (c - 1 >= 0) {
-        bfs(arr1, arr2, r, c - 1, rLim, cLim);
+    if (c - 1 >= 0) {  // 左
+        count = bfs(arr1, arr2, arr3, count, r, c - 1, rLim, cLim);
     }
-    if (r + 1 < rLim) {
-        bfs(arr1, arr2, r + 1, c, rLim, cLim);
+    if (r + 1 < rLim) {  // 下
+        count = bfs(arr1, arr2, arr3, count, r + 1, c, rLim, cLim);
     }
-    if (r - 1 >= 0) {
-        bfs(arr1, arr2, r - 1, c, rLim, cLim);
+    if (r - 1 >= 0) {  // 上
+        count = bfs(arr1, arr2, arr3, count, r - 1, c, rLim, cLim);
     }
+    return count;
 }
 const app = Vue.createApp({
     data() {
@@ -167,7 +177,9 @@ const app = Vue.createApp({
                 this.generateAnswer();
                 this.firstStep = false;
                 // console.log('first click is done');
-                bfs(this.boardArr, this.visibleArr, rIdx, cIdx, this.row, this.col);
+                let c = bfs(this.boardArr, this.visibleArr, this.flagArr, 0, rIdx, cIdx, this.row, this.col);
+                console.log('c: ', c);
+                this.flagCount += c;
                 play(audioClick);  // PLAY
             } else {
                 if (true === this.isGameOver) {
@@ -176,8 +188,11 @@ const app = Vue.createApp({
                 } else {
                     // 正常游戏流程的点击
                     if (false === isNaN(this.boardArr[rIdx][cIdx])) {// 非 雷 cell
+                        console.log('in this');
                         play(audioClick);
-                        bfs(this.boardArr, this.visibleArr, rIdx, cIdx, this.row, this.col);
+                        let c = bfs(this.boardArr, this.visibleArr, this.flagArr, 0, rIdx, cIdx, this.row, this.col);
+                        console.log('c: ', c);
+                        this.flagCount += c;
                     } else { // 点中雷   
                         this.visibleArr[rIdx][cIdx] = true;
                         this.isGameOver = true;

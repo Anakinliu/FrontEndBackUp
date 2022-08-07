@@ -11,14 +11,22 @@ body {
 .game {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info p{
+    font-size: 2em;
 }
 
 .board {
     height: 36em;
     width: 48em;
     position: relative;
-    top: calc(50% - 18em);
-    margin-left: calc(50% - 24em);
+    /* top: calc(50% - 18em);
+    margin-left: calc(50% - 24em); */
     display: flex;
     flex-wrap: wrap;
     background-color: black;
@@ -33,18 +41,22 @@ body {
 } */
 
 .cell {
-    height: 4em;
-    width: 4em;
+    height: 2em;
+    width: 2em;
     box-sizing: border-box;
     border: 1px gray solid;
     background-clip: border-box;
+}
 
+.cell p {
+    font-size: 1.5em;
+    line-height: 1.1em;
 }
 
 
 .bg-1 {
     /* background-color: #b8d284; */
-    background-color: #a2d149;
+    background-color: #7ba035;
 }
 
 .bg-2 {
@@ -80,8 +92,20 @@ body {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
+
 }
 
+.mess p {
+    font-size: 4em;
+    text-align: center;
+    color: gold;
+    background-color: #8bd751;
+}
+.mess .fail {
+    color: rgb(166, 34, 34);
+    background-color: gray;
+
+}
 .mess button {
     font-size: 4em;
 }

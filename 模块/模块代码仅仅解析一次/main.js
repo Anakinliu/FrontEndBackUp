@@ -1,0 +1,1 @@
+export let a = console.log('main.js..........')

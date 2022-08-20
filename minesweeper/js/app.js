@@ -2,6 +2,9 @@ window.addEventListener('load', (event) => {
     document.querySelector('#waiting').style.display = 'none';
 });
 
+const rMax = 60;
+const cMax = 60;
+
 const localMineCount = localStorage.getItem('userMine') ? parseInt(localStorage.getItem('userMine')) : 10;
 const localSeed = localStorage.getItem('userSeed') ? parseInt(localStorage.getItem('userSeed')) : 10;
 const localRow = localStorage.getItem('userRow') ? parseInt(localStorage.getItem('userRow')) : 18;
@@ -60,17 +63,21 @@ function bfs(arr1, arr2, arr3, count, r, c, rLim, cLim) {// 0区域向外扩展�
         }
         arr2[r][c] = true;
     }
-    if (c + 1 < cLim) {  // 右
-        count = bfs(arr1, arr2, arr3, count, r, c + 1, rLim, cLim);
-    }
-    if (c - 1 >= 0) {  // 左
-        count = bfs(arr1, arr2, arr3, count, r, c - 1, rLim, cLim);
-    }
-    if (r + 1 < rLim) {  // 下
-        count = bfs(arr1, arr2, arr3, count, r + 1, c, rLim, cLim);
-    }
-    if (r - 1 >= 0) {  // 上
-        count = bfs(arr1, arr2, arr3, count, r - 1, c, rLim, cLim);
+    try {
+        if (c + 1 < cLim && false === arr2[r][c + 1]) {  // 右
+            count = bfs(arr1, arr2, arr3, count, r, c + 1, rLim, cLim);
+        }
+        if (c - 1 >= 0 && false === arr2[r][c - 1]) {  // 左
+            count = bfs(arr1, arr2, arr3, count, r, c - 1, rLim, cLim);
+        }
+        if (r + 1 < rLim && false === arr2[r + 1][c]) {  // 下
+            count = bfs(arr1, arr2, arr3, count, r + 1, c, rLim, cLim);
+        }
+        if (r - 1 >= 0 && false === arr2[r - 1][c]) {  // 上
+            count = bfs(arr1, arr2, arr3, count, r - 1, c, rLim, cLim);
+        }
+    } catch {
+        console.log('超过最大栈深度！');
     }
     return count;
 }
@@ -97,7 +104,7 @@ const app = Vue.createApp({
     },
     watch: {
         row(v, oldV) {
-            if (v < 1 || v * this.col <= this.mineCount) {
+            if (v > rMax || v < 1 || v * this.col <= this.mineCount) {
                 this.row = oldV;
                 return;
             }
@@ -105,7 +112,7 @@ const app = Vue.createApp({
             this.restartGame();
         },
         col(v, oldV) {
-            if (v < 1 || v * this.row <= this.mineCount) {
+            if (v > cMax || v < 1 || v * this.row <= this.mineCount) {
                 this.col = oldV;
                 return;
             }
@@ -337,7 +344,7 @@ const app = Vue.createApp({
         }
     },
     computed: {
-        
+
     }
 })
 

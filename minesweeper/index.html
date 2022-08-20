@@ -52,10 +52,10 @@
                 </div>
             </div>
             <div class="info">
-                <p>行数：<input type="number" v-model="row"></p>
-                <p>列数：<input type="number" v-model="col"></p>
-                <p>自定义 💣：<input type="number" v-model="mineCount"></p>
-                <p>自定义随机种子：<input type="number" v-model="seed"></p>
+                <p>0 <= 行数 <= 60：<input contenteditable="true" type="number" v-model="row"></p>
+                <p>0 <= 列数 <= 60：<input contenteditable="true" type="number" v-model="col"></p>
+                <p>自定义 0<= 💣< 行*列）：<input contenteditable="true" type="number" v-model="mineCount"></p>
+                <p>自定义随机种子：<input contenteditable="true" type="number" v-model="seed"></p>
             </div>
         </div>
     </div>
